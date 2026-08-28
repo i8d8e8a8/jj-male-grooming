@@ -41,7 +41,7 @@ for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clam
   if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);
 }
 
-for (const rule of ['.introCopy{display:flex;flex-direction:column;align-items:center', '.introCopy>.label{width:100%;margin:0 auto;text-align:center!important', '.process .sectionTitle{text-align:center', '--reveal-x:-180px', '--reveal-x:180px', '.programVisual{clip-path:inset', '.faq details:hover summary']) {
+for (const rule of ['.introCopy{display:flex;flex-direction:column;align-items:center', '.introCopy>.label{width:100%;margin:0 auto;text-align:center!important', '.process .sectionTitle{text-align:center', '--reveal-x:-180px', '--reveal-x:180px', '.programVisual{clip-path:inset', '.faqItem:hover .faqAnswer', '@keyframes faqAnswerProximity']) {
   if (!sourceCss.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
 }
 
@@ -49,9 +49,8 @@ for (const rule of ['.deviceStage{height:760px;background:transparent', '.device
   if (!sourceCss.includes(rule)) throw new Error(`Missing premium equipment stage: ${rule}`);
 }
 
-const motionSource = await readFile(new URL('../app/reveal-motion.tsx', import.meta.url), 'utf8');
-for (const rule of ["matchMedia('(hover: hover) and (pointer: fine)')", "detail.addEventListener('mouseenter'", "detail.open = true"]) {
-  if (!motionSource.includes(rule)) throw new Error(`Missing FAQ answer interaction: ${rule}`);
+for (const copy of ['faqItem', 'faqQuestion', 'faqAnswer']) {
+  if (!html.includes(copy)) throw new Error(`Missing static FAQ answer interaction: ${copy}`);
 }
 
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
