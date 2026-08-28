@@ -41,7 +41,11 @@ await cp(new URL('../public/program-body-organic-v10.png', import.meta.url), new
 await cp(new URL('../public/program-private-valley-v3.png', import.meta.url), new URL('program-private-valley-v3.png', docs));
 await cp(new URL('../public/cynosure-product-lineage.png', import.meta.url), new URL('cynosure-product-lineage.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
+await cp(new URL('../public/apogee-elite-plus-device-cutout.png', import.meta.url), new URL('apogee-elite-plus-device-cutout.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));
+await cp(new URL('../public/care-before-shaving.jpg', import.meta.url), new URL('care-before-shaving.jpg', docs));
+await cp(new URL('../public/care-after-sunscreen.jpg', import.meta.url), new URL('care-after-sunscreen.jpg', docs));
+await cp(new URL('../public/strengths-hesitation.jpg', import.meta.url), new URL('strengths-hesitation.jpg', docs));
 await writeFile(new URL('.nojekyll', docs), '');
 await writeFile(new URL('index.html', docs), html);
 console.log('docs/index.html');

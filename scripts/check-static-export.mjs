@@ -28,6 +28,7 @@ if ((html.match(/programVisualLeft/g) ?? []).length !== 2) throw new Error('Expe
 if ((html.match(/programVisualRight/g) ?? []).length !== 1) throw new Error('Expected one right-side program visual');
 
 const css = await readFile(new URL(`_next/static/css/${html.match(/_next\/static\/css\/([^\"]+)/)?.[1]}`, docs), 'utf8');
+const sourceCss = await readFile(new URL('../app/area-visuals.css', import.meta.url), 'utf8');
 for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-width:480px', 'PRIVATE CARE']) {
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
@@ -41,11 +42,11 @@ for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clam
 }
 
 for (const rule of ['.introCopy{display:flex;flex-direction:column;align-items:center', '.introCopy>.label{width:100%;margin:0 auto;text-align:center!important', '.process .sectionTitle{text-align:center', '--reveal-x:-180px', '--reveal-x:180px', '.programVisual{clip-path:inset', '.faq details:hover summary']) {
-  if (!css.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
+  if (!sourceCss.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
 }
 
 for (const rule of ['.deviceStage{height:760px;background:transparent', '.deviceStage:before', '.device{width:132%', '.equipmentWave', '.deviceTitle']) {
-  if (!css.includes(rule)) throw new Error(`Missing premium equipment stage: ${rule}`);
+  if (!sourceCss.includes(rule)) throw new Error(`Missing premium equipment stage: ${rule}`);
 }
 
 const motionSource = await readFile(new URL('../app/reveal-motion.tsx', import.meta.url), 'utf8');
