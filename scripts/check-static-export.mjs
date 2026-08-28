@@ -44,6 +44,15 @@ for (const rule of ['.introCopy{display:flex;flex-direction:column;align-items:c
   if (!css.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
 }
 
+for (const rule of ['.deviceStage{height:760px;background:transparent', '.deviceStage:before', '.device{width:132%', '.equipmentWave', '.deviceTitle']) {
+  if (!css.includes(rule)) throw new Error(`Missing premium equipment stage: ${rule}`);
+}
+
+const motionSource = await readFile(new URL('../app/reveal-motion.tsx', import.meta.url), 'utf8');
+for (const rule of ["matchMedia('(hover: hover) and (pointer: fine)')", "detail.addEventListener('mouseenter'", "detail.open = true"]) {
+  if (!motionSource.includes(rule)) throw new Error(`Missing FAQ answer interaction: ${rule}`);
+}
+
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
 await access(new URL('strengths-hesitation.jpg', docs));
 
