@@ -8,4 +8,12 @@ for (const asset of localAssets) {
   await access(new URL(asset, docs));
 }
 
+for (const id of ['KteJgdWUTAE', 'KU8cPyx_Xv4', 'GZRrmqLd-z0']) {
+  if (!html.includes(`youtube.com/embed/${id}`)) throw new Error(`Missing YouTube embed: ${id}`);
+}
+
+for (const asset of ['program-face-abstract.png', 'program-body-abstract.png', 'program-private-v.png']) {
+  await access(new URL(asset, docs));
+}
+
 console.log(`static export OK (${localAssets.length} linked assets)`);
