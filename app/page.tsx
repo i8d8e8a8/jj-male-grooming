@@ -11,7 +11,7 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
-const priceVisuals = ['face-marble-v2.png', 'chest-marble-v2.png', 'arm-marble.png', 'leg-marble-v2.png', 'private-marble.png'];
+const priceVisuals = ['face-marble-v2.png', 'chest-marble-v2.png', 'arm-marble.png', 'leg-marble-v3.png', 'private-marble.png'];
 
 const priceGroups = [
   ['얼굴', [['인중', '15'], ['턱', '25'], ['목', '20'], ['볼', '20'], ['구레나룻', '20'], ['얼굴 전체', '50'], ['뒷목 헤어라인', '25']]],
