@@ -37,11 +37,11 @@ await cp(new URL('../public/program-body-abstract-v2.png', import.meta.url), new
 await cp(new URL('../public/program-private-v.png', import.meta.url), new URL('program-private-v.png', docs));
 await cp(new URL('../public/program-face-symbol-v3.png', import.meta.url), new URL('program-face-symbol-v3.png', docs));
 await cp(new URL('../public/program-private-wide-v2.png', import.meta.url), new URL('program-private-wide-v2.png', docs));
+await cp(new URL('../public/program-body-flow-v6.png', import.meta.url), new URL('program-body-flow-v6.png', docs));
+await cp(new URL('../public/program-private-valley-v3.png', import.meta.url), new URL('program-private-valley-v3.png', docs));
+await cp(new URL('../public/cynosure-product-lineage.png', import.meta.url), new URL('cynosure-product-lineage.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));
-await cp(new URL('../public/device-apogee-history.jpg', import.meta.url), new URL('device-apogee-history.jpg', docs));
-await cp(new URL('../public/device-apogee-plus-history.jpg', import.meta.url), new URL('device-apogee-plus-history.jpg', docs));
-await cp(new URL('../public/device-elite-plus-history.jpg', import.meta.url), new URL('device-elite-plus-history.jpg', docs));
 await writeFile(new URL('.nojekyll', docs), '');
 await writeFile(new URL('index.html', docs), html);
 console.log('docs/index.html');

@@ -11,7 +11,7 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
-const programVisuals = ['program-face-symbol-v3.png', 'program-private-wide-v2.png', 'program-private-v.png'];
+const programVisuals = ['program-face-symbol-v3.png', 'program-body-flow-v6.png', 'program-private-valley-v3.png'];
 
 const videos = [
   ['KteJgdWUTAE', 'LATEST · 2025.09.24', '남자제모는 JJ에서 해야하는 이유?'],

@@ -16,7 +16,7 @@ for (const copy of ['APOGEE', 'APOGEE+', 'ELITE+', '단일 파장에서 듀얼 �
   if (!html.includes(copy)) throw new Error(`Missing equipment evolution copy: ${copy}`);
 }
 
-for (const asset of ['program-face-symbol-v3.png', 'program-body-hills-v4.png', 'program-private-valley-v3.png']) {
+for (const asset of ['program-face-symbol-v3.png', 'program-body-flow-v6.png', 'program-private-valley-v3.png']) {
   await access(new URL(asset, docs));
 }
 
