@@ -34,6 +34,7 @@ if ((html.match(/programVisualRight/g) ?? []).length !== 1) throw new Error('Exp
 const css = await readFile(new URL(`_next/static/css/${html.match(/_next\/static\/css\/([^\"]+)/)?.[1]}`, docs), 'utf8');
 const sourceCss = await readFile(new URL('../app/area-visuals.css', import.meta.url), 'utf8');
 if (/filter\s*:\s*blur\(/.test(sourceCss)) throw new Error('Text blur animation must not be present');
+if (!sourceCss.includes('.careColumns article,.faq>.sectionTitle,.faq>.faqList,.consultation>*')) throw new Error('Final sections must remain fully legible');
 for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-width:480px', 'PRIVATE CARE']) {
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
