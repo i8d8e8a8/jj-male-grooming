@@ -24,13 +24,11 @@ for (const asset of ['device-apogee-history.jpg', 'device-apogee-plus-history.jp
   await access(new URL(asset, docs));
 }
 
-if (!html.includes('PRIVATE CARE')) throw new Error('Missing clear private-care background copy');
-
 if ((html.match(/programVisualLeft/g) ?? []).length !== 2) throw new Error('Expected two left-side program visuals');
 if ((html.match(/programVisualRight/g) ?? []).length !== 1) throw new Error('Expected one right-side program visual');
 
 const css = await readFile(new URL(`_next/static/css/${html.match(/_next\/static\/css\/([^\"]+)/)?.[1]}`, docs), 'utf8');
-for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-width:480px']) {
+for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-width:480px', 'PRIVATE CARE']) {
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
 

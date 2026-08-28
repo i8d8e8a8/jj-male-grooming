@@ -1,4 +1,5 @@
 .hero{min-height:720px;grid-template-columns:minmax(0,52%) 1fr}
+.equipment{background:linear-gradient(180deg,#0d2c4d 0%,#092440 100%);border-top:1px solid #315270}
 .heroCopy{padding-top:40px}
 .heroVisual{inset:0 0 0 52%}
 .heroVisual>img{width:120%;max-width:none;transform:translateX(-17%)}
@@ -53,3 +54,15 @@
 .equipmentEvolution{margin-top:110px;padding-top:58px;border-top:1px solid #ffffff38}.equipmentEvolution header{display:grid;grid-template-columns:180px minmax(320px,.9fr) 1fr;gap:45px;align-items:start}.equipmentEvolution h3{font-size:clamp(34px,4vw,54px);line-height:1.12;letter-spacing:-.055em;margin:0}.equipmentEvolution header>p:last-child{max-width:460px;color:#9fb0c2;font-size:14px;line-height:1.85;margin:3px 0 0}.equipmentEvolution ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin:58px 0 0;padding:0;border-top:1px solid #ffffff4a}.equipmentEvolution li{position:relative;min-height:235px;padding:28px 32px 30px 0;border-right:1px solid #ffffff20}.equipmentEvolution li+li{padding-left:32px}.equipmentEvolution li:before{content:"";position:absolute;width:7px;height:7px;top:-4px;left:0;background:#7791aa;border-radius:50%}.equipmentEvolution li+li:before{left:32px}.equipmentEvolution li>span{display:block;color:#7890a7;font-size:10px}.equipmentEvolution small{display:flex;align-items:center;gap:10px;margin-top:31px;color:#9fd9ff;font-size:11px;letter-spacing:.13em}.equipmentEvolution em{font-style:normal;background:#1682d4;color:#fff;padding:5px 8px;font-size:8px;letter-spacing:.08em}.equipmentEvolution strong{display:block;margin-top:12px;font-size:22px}.equipmentEvolution li p{max-width:290px;margin:18px 0 0;color:#91a6ba;font-size:12px;line-height:1.75}.equipmentEvolution .selected{background:linear-gradient(135deg,#0d3158,#092342);padding-right:30px}.equipmentEvolution .selected:before{background:#8bd5ff;box-shadow:0 0 0 7px #8bd5ff1c}
 @media(max-width:900px){.equipmentEvolution{margin-top:85px}.equipmentEvolution header{grid-template-columns:1fr;gap:20px}.equipmentEvolution ol{grid-template-columns:1fr}.equipmentEvolution li{min-height:auto;padding:28px 24px;border-right:0;border-bottom:1px solid #ffffff20}.equipmentEvolution li+li{padding-left:24px}.equipmentEvolution li:before,.equipmentEvolution li+li:before{left:0}}
 @media(max-width:640px){.equipmentEvolution{margin-top:70px;padding-top:42px}.equipmentEvolution h3{font-size:35px}.equipmentEvolution ol{margin-top:40px}.equipmentEvolution li{padding:25px 18px}}
+
+/* clearer section identity, approved history imagery, and private visual direction */
+.strengths:after{content:"PRIVATE CARE"}
+.programList article:nth-child(3) .programVisual img{object-position:52% 54%;transform:scale(-1.12,1.12)}
+.programList article:nth-child(3):hover .programVisual img{transform:scale(-1.145,1.145)}
+.equipmentEvolution li{min-height:420px}
+.equipmentEvolution li:after{content:"";display:block;height:160px;margin:20px 0;background:no-repeat center/contain}
+.equipmentEvolution li:nth-child(1):after{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/device-apogee-history.jpg')}
+.equipmentEvolution li:nth-child(2):after{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/device-apogee-plus-history.jpg')}
+.equipmentEvolution li:nth-child(3):after{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/device-elite-plus-history.jpg')}
+.equipmentEvolution small{margin-top:0}
+@media(max-width:900px){.equipmentEvolution li{min-height:auto}.equipmentEvolution li:after{height:190px}}
