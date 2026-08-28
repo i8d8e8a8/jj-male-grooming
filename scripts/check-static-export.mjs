@@ -20,9 +20,7 @@ for (const asset of ['program-face-symbol-v3.png', 'program-private-wide-v2.png'
   await access(new URL(asset, docs));
 }
 
-for (const asset of ['device-apogee-history.jpg', 'device-apogee-plus-history.jpg', 'device-elite-plus-history.jpg']) {
-  await access(new URL(asset, docs));
-}
+await access(new URL('cynosure-product-lineage.png', docs));
 
 if ((html.match(/programVisualLeft/g) ?? []).length !== 2) throw new Error('Expected two left-side program visuals');
 if ((html.match(/programVisualRight/g) ?? []).length !== 1) throw new Error('Expected one right-side program visual');
