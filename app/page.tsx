@@ -11,6 +11,12 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
+const areaVisuals = [
+  ['chest-marble.png', 'CHEST', '가슴', '넓은 면적도 피부 반응을 살피며 균일하게'],
+  ['underarm-marble.png', 'UNDERARM', '겨드랑이', '굴곡과 마찰이 많은 부위까지 세심하게'],
+  ['private-marble.png', 'PRIVATE', '프라이빗', '말하기 어려운 부위일수록 더 정확하고 조심스럽게'],
+];
+
 const priceGroups = [
   ['얼굴', [['인중', '15'], ['턱', '25'], ['목', '20'], ['볼', '20'], ['구레나룻', '20'], ['얼굴 전체', '50'], ['뒷목 헤어라인', '25']]],
   ['상체', [['가슴', '40'], ['배', '40'], ['가슴 + 배', '75'], ['유륜', '20'], ['허리', '35'], ['등', '75']]],
@@ -70,7 +76,7 @@ export default function Home() {
 
     <section className="equipment"><div className="equipmentInner wrap"><div className="deviceStage"><img className="deviceLogo" src="./apogee-elite-plus-logo.png" alt="Apogee Elite Plus"/><img className="device" src="./apogee-elite-plus-device.png" alt="사이노슈어 아포지 엘리트 플러스 레이저 장비"/><small>CYNOSURE APOGEE ELITE+</small></div><div className="equipmentText"><p className="label sky">아포지 엘리트 플러스</p><h2>남성의 모근을 겨냥하는<br/>두 개의 정밀한 파장.</h2><p className="equipmentLead">아포지 엘리트 플러스의 755nm 알렉산드라이트와 1064nm 롱펄스 엔디야그를 피부 톤과 모질에 맞춰 선택합니다.</p><div className="specs"><div><strong>755<span>nm</span></strong><p>상대적으로 얕은 모근과 밝은 피부 타입에 효과적으로 접근</p></div><div><strong>1064<span>nm</span></strong><p>깊고 굵은 모근과 다양한 피부 톤을 고려한 롱펄스 파장</p></div></div><ul><li><b>24mm 대형 스팟</b><span>넓은 부위를 빠르고 균일하게 조사</span></li><li><b>연속 에어 쿨링</b><span>시술 전·중·후 피부 표면을 냉각</span></li><li><b>비접촉 방식</b><span>젤을 바르지 않는 쾌적한 시술</span></li></ul></div></div></section>
 
-    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div></article>)}</div></section>
+    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="areaVisuals">{areaVisuals.map(([src, tag, title, text]) => <article key={tag}><img src={`./${src}`} alt={`${title} 제모 부위를 표현한 대리석 조형 이미지`}/><div><small>{tag}</small><h3>{title}</h3><p>{text}</p></div></article>)}</div><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div></article>)}</div></section>
 
     <section className="process"><div className="wrap"><header className="sectionTitle"><p className="label blue">남성 맞춤 5단계</p><h2>처음부터 끝까지<br/>안심할 수 있도록.</h2></header><ol>{process.map(([title, text], i) => <li key={title}><span>0{i + 1}</span><Icon name={(['consult','cream','laser','snow','guide'] as IconName[])[i]}/><h3>{title}</h3><p>{text}</p></li>)}</ol></div></section>
 

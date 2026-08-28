@@ -15,6 +15,9 @@ await cp(new URL('../public/favicon.svg', import.meta.url), new URL('favicon.svg
 await cp(new URL('../public/jj-urology-logo.png', import.meta.url), new URL('jj-urology-logo.png', docs));
 await cp(new URL('../public/jj-mark.png', import.meta.url), new URL('jj-mark.png', docs));
 await cp(new URL('../public/hero-male-editorial.png', import.meta.url), new URL('hero-male-editorial.png', docs));
+await cp(new URL('../public/chest-marble.png', import.meta.url), new URL('chest-marble.png', docs));
+await cp(new URL('../public/underarm-marble.png', import.meta.url), new URL('underarm-marble.png', docs));
+await cp(new URL('../public/private-marble.png', import.meta.url), new URL('private-marble.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));
 await writeFile(new URL('.nojekyll', docs), '');
