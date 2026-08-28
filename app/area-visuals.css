@@ -121,3 +121,49 @@
 }
 @media(max-width:640px){.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:15px}.introFacts p,.strengthList p,.equipmentText li span,.videoNotes p,.process li p,.careColumns p,.faq details p{font-size:14px}.videoGrid h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.heroCopy h1 span,.heroVisual>img,.sectionTitle h2,.introCopy h2,.equipmentText h2,.equipmentEvolution h3,.equipmentEvolution ol:before{animation:none!important}.introFacts article,.strengthList article,.process li,.videoGrid article,.priceTable>section,.icon{transition:none!important;transform:none!important}.programVisual:before,.priceVisual:before{display:none}}
+
+/* editorial scale + reliable cascading reveals */
+:root{--display-size:clamp(72px,7vw,112px);--section-size:clamp(52px,5.7vw,84px);--copy-size:17px}
+.hero h1{font-size:var(--display-size);line-height:.92;margin:34px 0 38px}
+.sectionTitle h2,.intro h2{font-size:var(--section-size);line-height:1.04}
+.strengths .sectionTitle h2,.equipmentText h2{font-size:clamp(50px,5vw,76px)}
+.programCopy h3{font-size:clamp(44px,4.2vw,62px)}
+.careColumns h3{font-size:clamp(42px,4vw,58px)}
+.process h3{font-size:26px}.priceTable h3{font-size:32px}.faq summary b{font-size:18px}
+.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:18px}
+.introFacts strong,.videoNotes h3{font-size:22px}.strengthList h3{font-size:25px}.videoGrid h3{font-size:25px}
+.intro,.program,.pricing,.videos,.process{padding-top:165px;padding-bottom:155px}
+
+.heroVisual{inset:0 0 0 50%;background:radial-gradient(circle at 58% 28%,#15385c 0,#071c38 58%)}
+.heroVisual>img{width:100%;height:82%;object-fit:contain;object-position:center top;transform:none;opacity:.9;animation:heroImageIn 1.2s cubic-bezier(.16,1,.3,1) both}
+.heroVisual:after{background:linear-gradient(90deg,var(--navy) 0%,transparent 18%),linear-gradient(0deg,rgba(3,23,45,.96) 0%,transparent 44%)}
+.heroBrand{animation:heroEnter .7s cubic-bezier(.16,1,.3,1) both}
+.heroCopy{animation:none}.heroCopy>.label,.heroCopy>.lead,.heroCopy>.actions{animation:heroEnter .85s cubic-bezier(.16,1,.3,1) both}
+.heroCopy>.label{animation-delay:.08s}.heroCopy h1 span:first-child{animation-delay:.16s}.heroCopy h1 span+span{animation-delay:.25s}.heroCopy>.lead{animation-delay:.36s}.heroCopy>.actions{animation-delay:.46s}
+.heroPanel{animation:heroEnter .9s .62s cubic-bezier(.16,1,.3,1) both}
+@keyframes heroImageIn{from{opacity:0;transform:translate3d(8%,0,0) scale(1.035)}to{opacity:.9;transform:none}}
+
+.motion-ready .reveal :is(.label,h2,.sectionTitle>p,.introCopy>p:last-child),
+.motion-ready .reveal :is(.introFacts article,.strengthList article,.deviceStage,.equipmentText>*:not(.label),.equipmentEvolution header>*,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.priceCta,.careColumns article,.faq details,.consultation>*){opacity:0;transform:translateY(42px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);transition-delay:var(--stagger,0ms)}
+.motion-ready .reveal.is-visible :is(.label,h2,.sectionTitle>p,.introCopy>p:last-child,.introFacts article,.strengthList article,.deviceStage,.equipmentText>*:not(.label),.equipmentEvolution header>*,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.priceCta,.careColumns article,.faq details,.consultation>*){opacity:1;transform:none}
+.motion-ready .reveal :is(.introFacts article,.strengthList article,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.careColumns article,.faq details,.sectionTitle h2,.introCopy h2,.equipmentText h2){animation:none!important}
+.reveal .label{--stagger:0ms}.reveal h2{--stagger:90ms}.reveal .sectionTitle>p,.reveal .introCopy>p:last-child{--stagger:180ms}
+.reveal :is(.introFacts article,.strengthList article,.equipmentText>*:not(.label),.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.faq details):nth-child(1){--stagger:120ms}
+.reveal :is(.introFacts article,.strengthList article,.equipmentText>*:not(.label),.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.faq details):nth-child(2){--stagger:210ms}
+.reveal :is(.introFacts article,.strengthList article,.equipmentText>*:not(.label),.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.faq details):nth-child(3){--stagger:300ms}
+.reveal :is(.strengthList article,.process li,.priceTable>section,.faq details):nth-child(4){--stagger:390ms}
+.reveal :is(.process li,.priceTable>section):nth-child(5){--stagger:480ms}
+
+.careColumns article{position:relative;min-height:500px;overflow:hidden;isolation:isolate;color:#fff;padding-top:76px;padding-bottom:76px}
+.careColumns article:before{content:"";position:absolute;z-index:-2;inset:0;background:center/cover no-repeat;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.careColumns article:first-child:before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/care-before-shaving.png');background-position:62% center}
+.careColumns article:last-child:before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/care-after-sunscreen.png');background-position:35% center}
+.careColumns article:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(5,28,54,.94) 0%,rgba(5,28,54,.8) 48%,rgba(5,28,54,.22) 100%)}
+.careColumns article+article:after{background:linear-gradient(90deg,rgba(5,28,54,.25) 0%,rgba(5,28,54,.8) 52%,rgba(5,28,54,.95) 100%)}
+.careColumns article:hover:before{transform:scale(1.035)}
+.careColumns article>*{max-width:410px}.careColumns article+article>*{margin-left:auto}.careColumns article>span:not(.icon){color:#8bd5ff}.careColumns p{color:#d4e0e9;font-size:17px}
+
+@media(max-width:1200px) and (min-width:901px){.hero h1{font-size:clamp(68px,7.2vw,88px)}}
+@media(max-width:900px){.heroVisual{background:#071c38}.heroVisual>img{height:76%;object-position:center top}.intro,.program,.pricing,.videos,.process{padding-top:125px;padding-bottom:115px}}
+@media(max-width:640px){:root{--display-size:clamp(48px,14vw,62px);--section-size:clamp(42px,11vw,54px);--copy-size:15px}.hero h1{font-size:var(--display-size);line-height:.96}.heroVisual>img{height:72%;object-fit:contain}.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:16px}.strengths .sectionTitle h2,.equipmentText h2{font-size:clamp(40px,11vw,52px)}.programCopy h3{font-size:38px}.process h3{font-size:23px}.careColumns article{min-height:430px;padding:55px 20px}.careColumns article:after,.careColumns article+article:after{background:linear-gradient(180deg,rgba(5,28,54,.91),rgba(5,28,54,.65))}.careColumns article+article>*{margin-left:0}.motion-ready .reveal :is(.label,h2,.sectionTitle>p,.introCopy>p:last-child),.motion-ready .reveal :is(.introFacts article,.strengthList article,.deviceStage,.equipmentText>*:not(.label),.equipmentEvolution header>*,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.priceCta,.careColumns article,.faq details,.consultation>*){transform:translateY(28px)}}
+@media(prefers-reduced-motion:reduce){.heroBrand,.heroCopy>.label,.heroCopy h1 span,.heroCopy>.lead,.heroCopy>.actions,.heroVisual>img,.heroPanel{animation:none!important}.motion-ready .reveal *{opacity:1!important;transform:none!important;transition:none!important}}

@@ -21,6 +21,8 @@ for (const asset of ['program-face-symbol-v3.png', 'program-body-organic-v10.png
 }
 
 await access(new URL('cynosure-product-lineage.png', docs));
+await access(new URL('care-before-shaving.png', docs));
+await access(new URL('care-after-sunscreen.png', docs));
 
 if ((html.match(/programVisualLeft/g) ?? []).length !== 2) throw new Error('Expected two left-side program visuals');
 if ((html.match(/programVisualRight/g) ?? []).length !== 1) throw new Error('Expected one right-side program visual');
