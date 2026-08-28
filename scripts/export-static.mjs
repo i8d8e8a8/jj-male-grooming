@@ -1,12 +1,18 @@
-import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
 
 const docs = new URL('../docs/', import.meta.url);
 let html = await (await fetch('http://localhost:3000/')).text();
+const cssFiles = (await readdir(new URL('../dist/client/_next/static/css/', import.meta.url)))
+  .filter((file) => /^index\..+\.css$/.test(file));
+
+if (cssFiles.length !== 1) throw new Error(`Expected one index CSS file, found ${cssFiles.length}`);
+
 html = html
   .replace(/<script[\s\S]*?<\/script>/g, '')
   .replace(/<link[^>]+rel="modulepreload"[^>]*>/g, '')
   .replaceAll('href="/_next/', 'href="./_next/')
-  .replaceAll('src="/_next/', 'src="./_next/');
+  .replaceAll('src="/_next/', 'src="./_next/')
+  .replace(/href="\.\/_next\/static\/css\/index\.[^"]+\.css"/g, `href="./_next/static/css/${cssFiles[0]}"`);
 
 await rm(docs, { recursive: true, force: true });
 await mkdir(docs, { recursive: true });
