@@ -24,6 +24,13 @@ document.querySelectorAll('.faqQuestion').forEach((button) => button.addEventLis
   item.classList.toggle('is-closed', !opening);
   button.setAttribute('aria-expanded', String(opening));
 }));
+const mobileBar = document.querySelector('.mobileBar');
+const consultation = document.querySelector('.consultation');
+if (mobileBar && consultation) {
+  new IntersectionObserver(([entry]) => mobileBar.classList.toggle('is-hidden', entry.isIntersecting), {
+    threshold: 0.08,
+  }).observe(consultation);
+}
 </script></body>`);
 
 await rm(docs, { recursive: true, force: true });

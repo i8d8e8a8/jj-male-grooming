@@ -57,6 +57,9 @@ for (const copy of ['faqItem', 'faqQuestion', 'faqAnswer']) {
   if (!html.includes(copy)) throw new Error(`Missing static FAQ answer interaction: ${copy}`);
 }
 if (!html.includes('data-static-faq')) throw new Error('Missing static FAQ toggle script');
+for (const rule of ["mobileBar.classList.toggle('is-hidden'", "new IntersectionObserver", '.mobileBar.is-hidden']) {
+  if (!(html + sourceCss).includes(rule)) throw new Error(`Missing mobile footer collision fix: ${rule}`);
+}
 for (const seo of ['rel="canonical"','og:title','application/ld+json','MedicalClinic']) {
   if (!html.includes(seo)) throw new Error(`Missing SEO metadata: ${seo}`);
 }
