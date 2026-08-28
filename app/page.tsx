@@ -11,7 +11,7 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
-const programVisuals = ['program-face-symbol-v3.png', 'program-body-flow-v6.png', 'program-private-valley-v3.png'];
+const programVisuals = ['program-face-symbol-v3.png', 'program-body-organic-v10.png', 'program-private-valley-v3.png'];
 
 const videos = [
   ['KteJgdWUTAE', 'LATEST · 2025.09.24', '남자제모는 JJ에서 해야하는 이유?'],
@@ -80,7 +80,7 @@ export default function Home() {
       <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img src="./hero-male-editorial.png" alt="자연스러운 피부결의 남성 측면 인물"/><div className="heroPanel"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div></div>
     </section>
 
-    <section className="intro wrap"><p className="label blue">왜 비뇨의학과인가</p><div className="introBody"><div className="introCopy"><h2>남성의 굵고 깊은 털,<br/>남성을 잘 아는 곳에서.</h2><p>남성 체모는 모근이 깊고 밀도가 높으며 호르몬의 영향을 강하게 받습니다. 피부 상태와 신체 구조를 세심하게 살피고, 부위별 모근 깊이와 모질에 맞춘 계획이 중요합니다.</p></div><div className="introFacts"><article><span>01</span><strong>남성 신체 구조</strong><p>얼굴부터 프라이빗 부위까지 구조와 피부 특성을 고려합니다.</p></article><article><span>02</span><strong>굵고 깊은 모근</strong><p>부위별 밀도와 깊이에 맞춰 파장과 출력을 세밀하게 설정합니다.</p></article><article><span>03</span><strong>민감 부위 진료 경험</strong><p>말하기 어려운 부위도 익숙하고 편안한 진료 과정으로 안내합니다.</p></article></div></div></section>
+    <section className="intro wrap"><div className="introCopy"><p className="label blue">왜 비뇨의학과인가</p><h2>남성의 굵고 깊은 털,<br/>남성을 잘 아는 곳에서.</h2><p>남성 체모는 모근의 깊이와 밀도, 부위별 피부 특성이 다릅니다.<br/>신체 구조부터 민감도까지 이해하는 계획이 중요합니다.</p></div><div className="introFacts"><article><span>01</span><Icon name="body"/><strong>남성 신체 구조</strong><p>얼굴부터 프라이빗 부위까지<br/>구조와 피부 특성을 고려합니다.</p></article><article><span>02</span><Icon name="laser"/><strong>굵고 깊은 모근</strong><p>부위별 밀도와 깊이에 맞춰<br/>파장과 출력을 설정합니다.</p></article><article><span>03</span><Icon name="lock"/><strong>민감 부위 진료 경험</strong><p>말하기 어려운 부위도 익숙하고<br/>편안하게 안내합니다.</p></article></div></section>
 
     <section className="strengths"><div className="wrap strengthsInner"><header className="sectionTitle"><p className="label sky">남성 전담 프라이빗 케어</p><h2>망설였던 이유까지<br/>케어의 기준으로.</h2><p className="privacyLead">마주치지 않도록, 드러나지 않도록,<br/>처음부터 끝까지 남성만을 위한 동선과 응대.</p></header><div className="strengthList">{strengths.map(([n, icon, title, text]) => <article key={n}><span>{n}</span><Icon name={icon as IconName}/><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
