@@ -16,9 +16,12 @@ await cp(new URL('../public/jj-urology-logo.png', import.meta.url), new URL('jj-
 await cp(new URL('../public/jj-mark.png', import.meta.url), new URL('jj-mark.png', docs));
 await cp(new URL('../public/hero-male-editorial.png', import.meta.url), new URL('hero-male-editorial.png', docs));
 await cp(new URL('../public/face-marble.png', import.meta.url), new URL('face-marble.png', docs));
+await cp(new URL('../public/face-marble-v2.png', import.meta.url), new URL('face-marble-v2.png', docs));
 await cp(new URL('../public/chest-marble.png', import.meta.url), new URL('chest-marble.png', docs));
+await cp(new URL('../public/chest-marble-v2.png', import.meta.url), new URL('chest-marble-v2.png', docs));
 await cp(new URL('../public/arm-marble.png', import.meta.url), new URL('arm-marble.png', docs));
 await cp(new URL('../public/leg-marble.png', import.meta.url), new URL('leg-marble.png', docs));
+await cp(new URL('../public/leg-marble-v2.png', import.meta.url), new URL('leg-marble-v2.png', docs));
 await cp(new URL('../public/private-marble.png', import.meta.url), new URL('private-marble.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));
