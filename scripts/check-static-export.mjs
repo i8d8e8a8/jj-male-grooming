@@ -12,7 +12,11 @@ for (const id of ['KteJgdWUTAE', 'KU8cPyx_Xv4', 'GZRrmqLd-z0']) {
   if (!html.includes(`youtube.com/embed/${id}`)) throw new Error(`Missing YouTube embed: ${id}`);
 }
 
-for (const asset of ['program-face-symbol-v3.png', 'program-body-symbol-v3.png', 'program-private-wide-v2.png']) {
+for (const copy of ['APOGEE', 'APOGEE+', 'ELITE+', '단일 파장에서 듀얼 파장으로']) {
+  if (!html.includes(copy)) throw new Error(`Missing equipment evolution copy: ${copy}`);
+}
+
+for (const asset of ['program-face-symbol-v3.png', 'program-private-wide-v2.png', 'program-private-v.png']) {
   await access(new URL(asset, docs));
 }
 
