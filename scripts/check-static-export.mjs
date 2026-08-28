@@ -34,4 +34,10 @@ for (const rule of ['.label{font-size:13px', '--copy-size:15px', '@keyframes tit
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
 }
 
+for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clamp(52px,5.7vw,84px)', '.reveal.is-visible', '--stagger']) {
+  if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);
+}
+
+if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
+
 console.log(`static export OK (${localAssets.length} linked assets)`);
