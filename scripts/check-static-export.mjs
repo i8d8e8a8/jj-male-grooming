@@ -40,7 +40,7 @@ for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clam
   if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);
 }
 
-for (const rule of ['.introCopy>.label{text-align:center', '.process .sectionTitle{text-align:center', '--reveal-x:-90px', '--reveal-x:90px', '.faq details:hover summary']) {
+for (const rule of ['.introCopy{display:flex;flex-direction:column;align-items:center', '.introCopy>.label{width:100%;margin:0 auto;text-align:center!important', '.process .sectionTitle{text-align:center', '--reveal-x:-180px', '--reveal-x:180px', '.programVisual{clip-path:inset', '.faq details:hover summary']) {
   if (!css.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
 }
 
