@@ -60,8 +60,8 @@ export default function Home() {
   return <main>
     <section className="hero">
       <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>JJ UROLOGY</span></div>
-      <div className="heroCopy"><p className="label">JJ 남성 레이저 제모</p><h1>남자의 제모는<br/><em>달라야 합니다.</em></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>
-      <div className="heroPanel" aria-label="JJ 남성 제모 핵심 원칙"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div>
+      <div className="heroCopy"><p className="label">JJ 남성 레이저 제모</p><h1><span>남자의 제모는</span><span>달라야 합니다.</span></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>
+      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img src="./hero-male-editorial.png" alt="자연스러운 피부결의 남성 측면 인물"/><div className="heroPanel"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div></div>
     </section>
 
     <section className="intro wrap"><p className="label blue">왜 비뇨의학과인가</p><div><h2>남성의 굵고 깊은 털,<br/>남성을 잘 아는 곳에서.</h2><p>남성 체모는 모근이 깊고 밀도가 높으며 호르몬의 영향을 강하게 받습니다. 높은 출력이 필요한 만큼 피부 상태와 신체 구조를 세심하게 살피고, 부위별 모근 깊이와 모질에 맞춘 계획이 중요합니다.</p></div></section>

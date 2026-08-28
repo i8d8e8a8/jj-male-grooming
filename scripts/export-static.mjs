@@ -14,6 +14,7 @@ await cp(new URL('../dist/client/_next/', import.meta.url), new URL('_next/', do
 await cp(new URL('../public/favicon.svg', import.meta.url), new URL('favicon.svg', docs));
 await cp(new URL('../public/jj-urology-logo.png', import.meta.url), new URL('jj-urology-logo.png', docs));
 await cp(new URL('../public/jj-mark.png', import.meta.url), new URL('jj-mark.png', docs));
+await cp(new URL('../public/hero-male-editorial.png', import.meta.url), new URL('hero-male-editorial.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));
 await writeFile(new URL('.nojekyll', docs), '');
