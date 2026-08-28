@@ -33,6 +33,7 @@ await cp(new URL('../public/leg-marble-v4.png', import.meta.url), new URL('leg-m
 await cp(new URL('../public/private-marble.png', import.meta.url), new URL('private-marble.png', docs));
 await cp(new URL('../public/program-face-abstract.png', import.meta.url), new URL('program-face-abstract.png', docs));
 await cp(new URL('../public/program-body-abstract.png', import.meta.url), new URL('program-body-abstract.png', docs));
+await cp(new URL('../public/program-body-abstract-v2.png', import.meta.url), new URL('program-body-abstract-v2.png', docs));
 await cp(new URL('../public/program-private-v.png', import.meta.url), new URL('program-private-v.png', docs));
 await cp(new URL('../public/apogee-elite-plus-device.png', import.meta.url), new URL('apogee-elite-plus-device.png', docs));
 await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new URL('apogee-elite-plus-logo.png', docs));

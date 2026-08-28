@@ -10,6 +10,7 @@
 .programVisual{position:absolute;inset:0 0 0 58%;background:#06172e;overflow:hidden}
 .programVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,.9) 9%,transparent 42%)}
 .programVisual img{width:100%;height:100%;object-fit:cover;display:block}
+.programList article:nth-child(2) .programVisual img{object-position:62% center}
 .videos{padding:135px 0;background:#071c38;color:#fff}
 .videos .split>p{color:#9fb2c5}.videoGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.videoGrid article{min-width:0}.videoFrame{aspect-ratio:16/9;background:#020b16;overflow:hidden}.videoFrame iframe{width:100%;height:100%;border:0}.videoGrid small{display:block;margin-top:18px;color:#78bfea;font-size:10px;letter-spacing:.09em}.videoGrid h3{font-size:20px;line-height:1.45;margin:9px 0 0}.videoNotes{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid #ffffff52}.videoNotes article{display:grid;grid-template-columns:34px 1fr;padding:26px 24px 0 0;border-right:1px solid #ffffff20}.videoNotes article:last-child{border-right:0}.videoNotes span{font-size:10px;color:#6d8aa3}.videoNotes h3{font-size:17px;margin:0}.videoNotes p{grid-column:2;color:#9fb2c5;font-size:12px;line-height:1.75;margin:13px 0 0}
 .priceVisual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,20,39,.9))}
@@ -20,3 +21,22 @@
 @media(max-width:900px){.programList article{padding-right:0}.programVisual{position:relative;inset:auto;grid-column:1/-1;height:230px;margin-top:25px}.programVisual:after{background:linear-gradient(180deg,#fff 0,transparent 28%)}.videoGrid,.videoNotes{grid-template-columns:1fr}.videoGrid{gap:42px}.videoNotes article{border-right:0;border-bottom:1px solid #ffffff20;padding:25px 0}.videoNotes{margin-top:55px}}
 @media(max-width:640px){.priceVisual{height:250px;margin-bottom:20px}.priceVisual h3{font-size:24px}}
 @media(max-width:640px){.introCopy>p{word-break:normal;overflow-wrap:anywhere}}
+
+/* restrained motion: CSS-only so the static GitHub Pages export keeps it */
+@keyframes heroEnter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes revealUp{from{opacity:.15;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes revealImage{from{opacity:.35;clip-path:inset(0 0 0 18%)}to{opacity:1;clip-path:inset(0)}}
+.heroCopy,.heroPanel{animation:heroEnter .8s cubic-bezier(.2,.7,.2,1) both}
+.heroPanel{animation-delay:.14s}
+.button,.quietLink,.priceCta,.programVisual img,.priceVisual img{transition:transform .45s cubic-bezier(.2,.7,.2,1),opacity .35s ease,background-color .25s ease}
+.button:hover,.priceCta:hover{transform:translateY(-3px)}
+.quietLink:hover{opacity:.72}.programList article:hover .programVisual img,.priceTable>section:hover .priceVisual img{transform:scale(1.025)}
+@supports (animation-timeline:view()){
+  .introBody,.strengthsInner,.equipmentInner,.program .sectionTitle,.programList article,.videos .sectionTitle,.videoGrid article,.videoNotes article,.process .sectionTitle,.process li,.pricing .sectionTitle,.priceTable>section,.careColumns article,.faq>*,.consultation>*{animation:revealUp linear both;animation-timeline:view();animation-range:entry 8% cover 28%}
+  .programVisual,.priceVisual{animation:revealImage linear both;animation-timeline:view();animation-range:entry 5% cover 26%}
+}
+@media(max-width:1200px) and (min-width:901px){.hero{grid-template-columns:minmax(470px,52%) 1fr}.hero h1{font-size:clamp(58px,6.1vw,76px)}.intro{grid-template-columns:130px 1fr;gap:38px}.introBody{gap:5vw}.programList article{padding-right:42%}.programVisual{inset:0 0 0 60%}.videoGrid{gap:18px}.videoGrid h3{font-size:18px}}
+@media(max-width:900px) and (min-width:641px){.wrap{width:min(100% - 64px,760px)}.heroCopy{max-width:680px}.intro,.program,.pricing{padding:110px 0}.programVisual{height:300px}.videoGrid{grid-template-columns:repeat(2,1fr)}.videoGrid article:first-child{grid-column:1/-1}.videoGrid article:first-child .videoFrame{max-width:760px}.priceTable{grid-template-columns:1fr}.careColumns article{padding-top:70px;padding-bottom:70px}}
+@media(max-width:640px){.videos{padding:90px 0}.videoFrame{border-radius:2px}.videoNotes{margin-top:42px}.programVisual{height:210px}.programList article:nth-child(2) .programVisual img{object-position:70% center}.equipmentText h2{font-size:clamp(34px,10vw,39px)}.process h3{font-size:20px}.consultation{padding:90px 20px 82px}}
+@media(max-width:480px){.wrap{width:calc(100% - 32px)}.hero{padding-left:16px;padding-right:16px}.heroBrand{left:16px}.hero h1{font-size:clamp(39px,12vw,51px)}.hero h1 span{white-space:normal}.heroVisual{height:470px;margin-left:-16px;margin-right:-16px}.heroPanel{left:16px;right:16px}.sectionTitle h2,.intro h2{font-size:clamp(34px,10.5vw,39px)}.intro{gap:32px}.introFacts article{gap:12px}.strengthList article{grid-template-columns:28px 46px 1fr}.strengthList article p{grid-column:2/4;margin-top:0}.programList article{grid-template-columns:64px 1fr;gap:14px}.programIndex .icon{width:52px;height:52px}.programVisual{height:190px;margin-left:-80px}.process li{grid-template-columns:28px 46px 1fr}.process li p{grid-column:2/4}.priceVisual{height:220px}.faq summary{grid-template-columns:35px 1fr auto}.faq details p{padding-left:35px;padding-right:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.heroCopy,.heroPanel,.introBody,.strengthsInner,.equipmentInner,.program .sectionTitle,.programList article,.videos .sectionTitle,.videoGrid article,.videoNotes article,.process .sectionTitle,.process li,.pricing .sectionTitle,.priceTable>section,.careColumns article,.faq>*,.consultation>*,.programVisual,.priceVisual{animation:none!important}.button,.quietLink,.priceCta,.programVisual img,.priceVisual img{transition:none!important}}
