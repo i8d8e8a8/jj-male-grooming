@@ -222,13 +222,13 @@
 .faqItem:hover .faqAnswer p,.faqItem:focus .faqAnswer p,.faqItem:focus-within .faqAnswer p{padding-bottom:27px;transform:none}
 .faqItem:hover .faqQuestion i,.faqItem:focus .faqQuestion i,.faqItem:focus-within .faqQuestion i{transform:rotate(45deg)}
 @supports (animation-timeline:view()){
-  .faqItem{animation:faqProximity linear both;animation-timeline:view();animation-range:entry 20% cover 42%}
-  .faqItem .faqAnswer{animation:faqAnswerProximity linear both;animation-timeline:view();animation-range:entry 25% cover 45%}
-  .faqItem .faqQuestion i{animation:faqPlusProximity linear both;animation-timeline:view();animation-range:entry 25% cover 45%}
+  .faqItem{animation:faqProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .faqItem .faqAnswer{animation:faqAnswerProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .faqItem .faqQuestion i{animation:faqPlusProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
 }
-@keyframes faqProximity{0%,28%{background:transparent}65%,100%{background:#f6f9fb}}
-@keyframes faqAnswerProximity{0%,28%{grid-template-rows:0fr;opacity:0}65%,100%{grid-template-rows:1fr;opacity:1}}
-@keyframes faqPlusProximity{0%,28%{transform:none}65%,100%{transform:rotate(45deg)}}
+@keyframes faqProximity{0%,12%{background:transparent}55%,100%{background:#f6f9fb}}
+@keyframes faqAnswerProximity{0%,12%{grid-template-rows:0fr;opacity:0}55%,100%{grid-template-rows:1fr;opacity:1}}
+@keyframes faqPlusProximity{0%,12%{transform:none}55%,100%{transform:rotate(45deg)}}
 
 @media(max-width:900px){.process ol{grid-template-columns:1fr 1fr;gap:42px 0}.process ol:before{display:none}.process li:last-child{grid-column:1/-1;max-width:360px;margin:auto}.strengths:before{background-position:68% center;opacity:.5}}
 @media(max-width:640px){.motion-ready .program.reveal .programList article{transform:translateX(calc(var(--reveal-x) * .48))}.process .sectionTitle{margin-bottom:52px}.process ol{grid-template-columns:1fr;gap:38px}.process li,.process li:last-child{max-width:360px;margin:auto}.process li p{grid-column:auto}.strengths:before{background:linear-gradient(180deg,rgba(7,28,56,.96),rgba(7,28,56,.76)),url('https://i8d8e8a8.github.io/jj-male-grooming/strengths-hesitation.jpg') 66% center/cover no-repeat}.faqItem:hover,.faqItem:focus{transform:none}.faqQuestion{grid-template-columns:35px 1fr auto}.faqAnswer p{padding-left:35px;padding-right:20px}}
