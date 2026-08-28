@@ -40,6 +40,11 @@ for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clam
   if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);
 }
 
+for (const rule of ['.introCopy>.label{text-align:center', '.process .sectionTitle{text-align:center', '--reveal-x:-90px', '--reveal-x:90px', '.faq details:hover summary']) {
+  if (!css.includes(rule)) throw new Error(`Missing requested layout or directional motion: ${rule}`);
+}
+
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
+await access(new URL('strengths-hesitation.jpg', docs));
 
 console.log(`static export OK (${localAssets.length} linked assets)`);
