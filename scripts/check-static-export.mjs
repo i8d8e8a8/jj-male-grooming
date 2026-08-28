@@ -16,6 +16,10 @@ for (const copy of ['APOGEE', 'APOGEE+', 'ELITE+', '단일 파장에서 듀얼 �
   if (!html.includes(copy)) throw new Error(`Missing equipment evolution copy: ${copy}`);
 }
 
+for (const copy of ['강남대로 238', '스카이쏠라빌딩 13·14층', '양재역 4번 출구']) {
+  if (!html.includes(copy)) throw new Error(`Missing verified clinic location: ${copy}`);
+}
+
 for (const asset of ['program-face-symbol-v3.png', 'program-body-organic-v10.png', 'program-private-valley-v3.png']) {
   await access(new URL(asset, docs));
 }

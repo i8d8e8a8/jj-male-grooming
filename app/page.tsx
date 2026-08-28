@@ -98,7 +98,7 @@ export default function Home() {
 
     <section className="faq wrap"><header className="sectionTitle"><p className="label blue">제모 상담 안내</p><h2>자주 묻는 질문</h2></header><div className="faqList">{faqs.map(([q, a], i) => <article className="faqItem" key={q}><button className="faqQuestion" type="button" aria-expanded="false"><span>0{i + 1}</span><b>{q}</b><i>＋</i></button><div className="faqAnswer"><p>{a}</p></div></article>)}</div></section>
 
-    <section className="consultation" id="consultation"><img src="./jj-mark.png" alt=""/><p className="label sky">1:1 비밀 상담</p><h2>남성을 위한 관리,<br/><em>JJ에서 시작하세요.</em></h2><p>원하는 부위와 현재 피부 상태를 알려주세요.<br/>남성 전담 스태프가 부담 없이 안내해 드립니다.</p><div className="contactActions"><a className="button kakao" href="https://pf.kakao.com/_qYlyV" target="_blank" rel="noreferrer">카카오톡 1:1 상담 ↗</a><a className="button outline" href="tel:1599-5952">전화 상담 1599-5952</a></div><div className="clinicInfo"><span>서울 강남구 선릉로 815, 신한양빌딩</span><span>수인분당선 압구정로데오역 5번 출구</span></div></section>
+    <section className="consultation" id="consultation"><img src="./jj-mark.png" alt=""/><p className="label sky">1:1 비밀 상담</p><h2>남성을 위한 관리,<br/><em>JJ에서 시작하세요.</em></h2><p>원하는 부위와 현재 피부 상태를 알려주세요.<br/>남성 전담 스태프가 부담 없이 안내해 드립니다.</p><div className="contactActions"><a className="button kakao" href="https://pf.kakao.com/_qYlyV" target="_blank" rel="noreferrer">카카오톡 1:1 상담 ↗</a><a className="button outline" href="tel:1599-5952">전화 상담 1599-5952</a></div><div className="clinicInfo"><span>서울특별시 강남구 강남대로 238, 스카이쏠라빌딩 13·14층</span><span>3호선·신분당선 양재역 4번 출구</span></div></section>
     <div className="mobileBar"><a href="https://pf.kakao.com/_qYlyV" target="_blank" rel="noreferrer">카카오 상담</a><a href="tel:1599-5952">전화 상담</a></div>
   </main>;
 }
