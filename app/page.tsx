@@ -73,7 +73,12 @@ function Icon({name}: {name: IconName}) {
 }
 
 export default function Home() {
-  return <main data-reveal-root><RevealMotion/>
+  const schema={
+    '@context':'https://schema.org','@type':'MedicalClinic',name:'JJ비뇨기과',url:'https://i8d8e8a8.github.io/jj-male-grooming/',telephone:'1599-5952',
+    address:{'@type':'PostalAddress',streetAddress:'강남대로 238 스카이쏠라빌딩 13·14층',addressLocality:'강남구',addressRegion:'서울특별시',addressCountry:'KR'},
+    medicalSpecialty:'Urology',availableService:[{'@type':'MedicalProcedure',name:'남성 레이저 제모'}],
+  };
+  return <main data-reveal-root><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><RevealMotion/>
     <section className="hero">
       <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>JJ UROLOGY</span></div>
       <div className="heroCopy"><p className="label">JJ 남성 레이저 제모</p><h1><span>남자의 제모는</span><span>달라야 합니다.</span></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>

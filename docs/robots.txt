@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://i8d8e8a8.github.io/jj-male-grooming/sitemap.xml

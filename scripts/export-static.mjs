@@ -8,7 +8,7 @@ const cssFiles = (await readdir(new URL('../dist/client/_next/static/css/', impo
 if (cssFiles.length !== 1) throw new Error(`Expected one index CSS file, found ${cssFiles.length}`);
 
 html = html
-  .replace(/<script[\s\S]*?<\/script>/g, '')
+  .replace(/<script(?![^>]*type="application\/ld\+json")[\s\S]*?<\/script>/g, '')
   .replace(/<link[^>]+rel="modulepreload"[^>]*>/g, '')
   .replaceAll('href="/_next/', 'href="./_next/')
   .replaceAll('src="/_next/', 'src="./_next/')
@@ -58,6 +58,8 @@ await cp(new URL('../public/apogee-elite-plus-logo.png', import.meta.url), new U
 await cp(new URL('../public/care-before-shaving.jpg', import.meta.url), new URL('care-before-shaving.jpg', docs));
 await cp(new URL('../public/care-after-sunscreen.jpg', import.meta.url), new URL('care-after-sunscreen.jpg', docs));
 await cp(new URL('../public/strengths-hesitation.jpg', import.meta.url), new URL('strengths-hesitation.jpg', docs));
+await cp(new URL('../public/robots.txt', import.meta.url), new URL('robots.txt', docs));
+await cp(new URL('../public/sitemap.xml', import.meta.url), new URL('sitemap.xml', docs));
 await writeFile(new URL('.nojekyll', docs), '');
 await writeFile(new URL('index.html', docs), html);
 console.log('docs/index.html');
