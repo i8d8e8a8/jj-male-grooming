@@ -14,6 +14,18 @@ html = html
   .replaceAll('src="/_next/', 'src="./_next/')
   .replace(/href="\.\/_next\/static\/css\/index\.[^"]+\.css"/g, `href="./_next/static/css/${cssFiles[0]}"`);
 
+html = html.replace('</body>', `<script data-static-faq>
+document.querySelectorAll('.faqQuestion').forEach((button) => button.addEventListener('click', () => {
+  const item = button.closest('.faqItem');
+  const answer = item.querySelector('.faqAnswer');
+  const visuallyOpen = getComputedStyle(answer).gridTemplateRows !== '0px';
+  const opening = item.classList.contains('is-closed') || (!item.classList.contains('is-open') && !visuallyOpen);
+  item.classList.toggle('is-open', opening);
+  item.classList.toggle('is-closed', !opening);
+  button.setAttribute('aria-expanded', String(opening));
+}));
+</script></body>`);
+
 await rm(docs, { recursive: true, force: true });
 await mkdir(docs, { recursive: true });
 await cp(new URL('../dist/client/_next/', import.meta.url), new URL('_next/', docs), { recursive: true });

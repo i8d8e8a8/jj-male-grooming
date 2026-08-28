@@ -52,6 +52,7 @@ for (const rule of ['.deviceStage{height:760px;background:transparent', '.device
 for (const copy of ['faqItem', 'faqQuestion', 'faqAnswer']) {
   if (!html.includes(copy)) throw new Error(`Missing static FAQ answer interaction: ${copy}`);
 }
+if (!html.includes('data-static-faq')) throw new Error('Missing static FAQ toggle script');
 
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
 await access(new URL('strengths-hesitation.jpg', docs));

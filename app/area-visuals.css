@@ -212,19 +212,21 @@
 .faq details[open] p{opacity:1;transform:none}
 @supports (interpolate-size:allow-keywords){:root{interpolate-size:allow-keywords}.faq details::details-content{block-size:0;overflow:hidden;transition:block-size .48s cubic-bezier(.16,1,.3,1),content-visibility .48s allow-discrete}.faq details[open]::details-content{block-size:auto}}
 .faqItem{position:relative;border-bottom:1px solid var(--line);overflow:hidden;outline:0;transition:background-color .3s ease,transform .45s cubic-bezier(.16,1,.3,1)}
-.faqQuestion{display:grid;grid-template-columns:50px 1fr auto;align-items:center;padding:27px 0;cursor:pointer;transition:padding .45s cubic-bezier(.16,1,.3,1),color .25s ease}
+.faqQuestion{display:grid;width:100%;grid-template-columns:50px 1fr auto;align-items:center;padding:27px 0;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;transition:padding .65s cubic-bezier(.22,1,.36,1),color .38s ease}
 .faqQuestion span{font-size:11px;color:#8491a0}.faqQuestion b{font-size:18px}.faqQuestion i{font-style:normal;font-size:20px;font-weight:300;transition:transform .35s ease}
-.faqAnswer{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .58s cubic-bezier(.16,1,.3,1),opacity .35s ease}
-.faqAnswer p{min-height:0;overflow:hidden;margin:0;padding:0 38px 0 50px;color:var(--muted);font-size:var(--copy-size);line-height:1.8;transform:translateY(-10px);transition:padding .5s ease,transform .5s cubic-bezier(.16,1,.3,1)}
+.faqAnswer{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .78s cubic-bezier(.22,1,.36,1),opacity .48s ease}
+.faqAnswer p{min-height:0;overflow:hidden;margin:0;padding:0 38px 0 50px;color:var(--muted);font-size:var(--copy-size);line-height:1.8;transform:translateY(-7px);transition:padding .68s cubic-bezier(.22,1,.36,1),transform .68s cubic-bezier(.22,1,.36,1)}
 .faqItem:hover,.faqItem:focus,.faqItem:focus-within{background:#f6f9fb;transform:translateX(9px)}
 .faqItem:hover .faqQuestion,.faqItem:focus .faqQuestion,.faqItem:focus-within .faqQuestion{padding-left:12px;color:var(--blue)}
 .faqItem:hover .faqAnswer,.faqItem:focus .faqAnswer,.faqItem:focus-within .faqAnswer{grid-template-rows:1fr;opacity:1}
 .faqItem:hover .faqAnswer p,.faqItem:focus .faqAnswer p,.faqItem:focus-within .faqAnswer p{padding-bottom:27px;transform:none}
 .faqItem:hover .faqQuestion i,.faqItem:focus .faqQuestion i,.faqItem:focus-within .faqQuestion i{transform:rotate(45deg)}
+.faqItem.is-open{background:#f6f9fb}.faqItem.is-open .faqAnswer{grid-template-rows:1fr;opacity:1}.faqItem.is-open .faqAnswer p{padding-bottom:27px;transform:none}.faqItem.is-open .faqQuestion{padding-left:12px;color:var(--blue)}.faqItem.is-open .faqQuestion i{transform:rotate(45deg)}
+.faqItem.is-closed{transform:none!important}.faqItem.is-closed .faqAnswer{animation:none!important;grid-template-rows:0fr!important;opacity:0!important}.faqItem.is-closed .faqAnswer p{padding-bottom:0!important;transform:translateY(-7px)!important}.faqItem.is-closed .faqQuestion i{animation:none!important;transform:none!important}
 @supports (animation-timeline:view()){
-  .faqItem{animation:faqProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
-  .faqItem .faqAnswer{animation:faqAnswerProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
-  .faqItem .faqQuestion i{animation:faqPlusProximity linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .faqItem{animation:faqProximity .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
+  .faqItem .faqAnswer{animation:faqAnswerProximity .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
+  .faqItem .faqQuestion i{animation:faqPlusProximity .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
 }
 @keyframes faqProximity{0%,12%{background:transparent}55%,100%{background:#f6f9fb}}
 @keyframes faqAnswerProximity{0%,12%{grid-template-rows:0fr;opacity:0}55%,100%{grid-template-rows:1fr;opacity:1}}
