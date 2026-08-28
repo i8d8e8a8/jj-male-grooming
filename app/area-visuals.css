@@ -5,10 +5,18 @@
 .heroPanel{bottom:38px}
 .priceVisual{position:relative;height:230px;margin-bottom:28px;overflow:hidden;background:#071b34}
 .introBody,.introCopy,.introFacts{min-width:0}
+.programList article{position:relative;min-height:280px;padding-right:45%;overflow:hidden}
+.programIndex,.programCopy{position:relative;z-index:2}
+.programVisual{position:absolute;inset:0 0 0 58%;background:#06172e;overflow:hidden}
+.programVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,.9) 9%,transparent 42%)}
+.programVisual img{width:100%;height:100%;object-fit:cover;display:block}
+.videos{padding:135px 0;background:#071c38;color:#fff}
+.videos .split>p{color:#9fb2c5}.videoGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.videoGrid article{min-width:0}.videoFrame{aspect-ratio:16/9;background:#020b16;overflow:hidden}.videoFrame iframe{width:100%;height:100%;border:0}.videoGrid small{display:block;margin-top:18px;color:#78bfea;font-size:10px;letter-spacing:.09em}.videoGrid h3{font-size:20px;line-height:1.45;margin:9px 0 0}.videoNotes{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid #ffffff52}.videoNotes article{display:grid;grid-template-columns:34px 1fr;padding:26px 24px 0 0;border-right:1px solid #ffffff20}.videoNotes article:last-child{border-right:0}.videoNotes span{font-size:10px;color:#6d8aa3}.videoNotes h3{font-size:17px;margin:0}.videoNotes p{grid-column:2;color:#9fb2c5;font-size:12px;line-height:1.75;margin:13px 0 0}
 .priceVisual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,20,39,.9))}
 .priceVisual img{width:100%;height:100%;object-fit:cover;display:block}
 .priceTable section:nth-child(2) .priceVisual img{object-position:center 18%}
 .priceVisual h3{position:absolute;z-index:1;left:22px;bottom:18px;margin:0;color:#fff;font-size:25px}
 @media(max-width:900px){.hero{min-height:auto;grid-template-columns:1fr}.heroCopy{padding-top:70px}.heroVisual{inset:auto}.heroVisual>img{width:100%;max-width:100%;transform:none}.priceVisual{height:200px}}
+@media(max-width:900px){.programList article{padding-right:0}.programVisual{position:relative;inset:auto;grid-column:1/-1;height:230px;margin-top:25px}.programVisual:after{background:linear-gradient(180deg,#fff 0,transparent 28%)}.videoGrid,.videoNotes{grid-template-columns:1fr}.videoGrid{gap:42px}.videoNotes article{border-right:0;border-bottom:1px solid #ffffff20;padding:25px 0}.videoNotes{margin-top:55px}}
 @media(max-width:640px){.priceVisual{height:250px;margin-bottom:20px}.priceVisual h3{font-size:24px}}
 @media(max-width:640px){.introCopy>p{word-break:normal;overflow-wrap:anywhere}}

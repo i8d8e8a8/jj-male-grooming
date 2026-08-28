@@ -11,6 +11,20 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
+const programVisuals = ['program-face-abstract.png', 'program-body-abstract.png', 'program-private-v.png'];
+
+const videos = [
+  ['KteJgdWUTAE', 'LATEST · 2025.09.24', '남자제모는 JJ에서 해야하는 이유?'],
+  ['KU8cPyx_Xv4', 'RECENT POPULAR · 2025.01.10', '남성 제모, 이렇게 쉬울 줄이야!'],
+  ['GZRrmqLd-z0', 'MOST VIEWED', '남자들이 항문제모를 해야하는 이유는?'],
+];
+
+const videoNotes = [
+  ['왁싱과 레이저의 차이', '왁싱은 털을 뽑는 방식이고, 레이저는 성장기의 모근을 반복적으로 조사해 감소를 유도합니다.'],
+  ['남성 모근에 맞는 세팅', '남성은 피부 두께와 모근의 밀도·굵기가 달라 부위와 피부 반응에 맞춘 출력 설정이 중요합니다.'],
+  ['민감 부위도 빠르고 비접촉으로', '아포지 엘리트 플러스의 비접촉 조사 방식으로 넓거나 민감한 부위도 위생적으로 진행합니다.'],
+];
+
 const priceVisuals = ['face-marble-v2.png', 'chest-marble-v2.png', 'arm-marble.png', 'leg-marble-v4.png', 'private-marble.png'];
 
 const priceGroups = [
@@ -72,7 +86,9 @@ export default function Home() {
 
     <section className="equipment"><div className="equipmentInner wrap"><div className="deviceStage"><img className="deviceLogo" src="./apogee-elite-plus-logo.png" alt="Apogee Elite Plus"/><img className="device" src="./apogee-elite-plus-device.png" alt="사이노슈어 아포지 엘리트 플러스 레이저 장비"/><small>CYNOSURE APOGEE ELITE+</small></div><div className="equipmentText"><p className="label sky">아포지 엘리트 플러스</p><h2>남성의 모근을 겨냥하는<br/>두 개의 정밀한 파장.</h2><p className="equipmentLead">아포지 엘리트 플러스의 755nm 알렉산드라이트와 1064nm 롱펄스 엔디야그를 피부 톤과 모질에 맞춰 선택합니다.</p><div className="specs"><div><strong>755<span>nm</span></strong><p>상대적으로 얕은 모근과 밝은 피부 타입에 효과적으로 접근</p></div><div><strong>1064<span>nm</span></strong><p>깊고 굵은 모근과 다양한 피부 톤을 고려한 롱펄스 파장</p></div></div><ul><li><b>24mm 대형 스팟</b><span>넓은 부위를 빠르고 균일하게 조사</span></li><li><b>연속 에어 쿨링</b><span>시술 전·중·후 피부 표면을 냉각</span></li><li><b>비접촉 방식</b><span>젤을 바르지 않는 쾌적한 시술</span></li></ul></div></div></section>
 
-    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div></article>)}</div></section>
+    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div><div className="programVisual"><img src={`./${programVisuals[i]}`} alt=""/></div></article>)}</div></section>
+
+    <section className="videos"><div className="wrap"><header className="sectionTitle split"><div><p className="label sky">JJ UROLOGY YOUTUBE</p><h2>영상으로 먼저 보는<br/>남성 제모.</h2></div><p>최신 영상과 실제 시청 반응이 좋았던 제모 콘텐츠를 선별했습니다. 시술 과정과 민감 부위 제모가 궁금하다면 영상으로 먼저 확인해 보세요.</p></header><div className="videoGrid">{videos.map(([id, meta, title]) => <article key={id}><div className="videoFrame"><iframe src={`https://www.youtube.com/embed/${id}`} title={title} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/></div><small>{meta}</small><h3>{title}</h3></article>)}</div><div className="videoNotes">{videoNotes.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
 
     <section className="process"><div className="wrap"><header className="sectionTitle"><p className="label blue">남성 맞춤 5단계</p><h2>처음부터 끝까지<br/>안심할 수 있도록.</h2></header><ol>{process.map(([title, text], i) => <li key={title}><span>0{i + 1}</span><Icon name={(['consult','cream','laser','snow','guide'] as IconName[])[i]}/><h3>{title}</h3><p>{text}</p></li>)}</ol></div></section>
 
