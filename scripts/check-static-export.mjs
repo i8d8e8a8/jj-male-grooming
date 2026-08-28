@@ -30,4 +30,8 @@ for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
 
+for (const rule of ['.label{font-size:13px', '--copy-size:15px', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
+  if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
+}
+
 console.log(`static export OK (${localAssets.length} linked assets)`);
