@@ -1,11 +1,6 @@
-.areaVisuals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:72px}
-.areaVisuals article{position:relative;min-height:500px;overflow:hidden;background:#071b34;color:#fff}
-.areaVisuals img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
-.areaVisuals article:hover img{transform:scale(1.02)}
-.areaVisuals article:after{content:"";position:absolute;inset:38% 0 0;background:linear-gradient(transparent,rgba(3,20,39,.94))}
-.areaVisuals article div{position:absolute;z-index:1;left:28px;right:28px;bottom:26px}
-.areaVisuals small{font-size:10px;letter-spacing:.16em;color:#8ec9f2}
-.areaVisuals h3{font-size:30px;margin:8px 0 9px;letter-spacing:-.04em}
-.areaVisuals p{margin:0;color:#b8c8d8;font-size:13px;line-height:1.55}
-@media(max-width:900px){.areaVisuals{grid-template-columns:repeat(3,1fr);gap:8px}.areaVisuals article{min-height:390px}.areaVisuals article div{left:18px;right:18px;bottom:20px}}
-@media(max-width:640px){.areaVisuals{grid-template-columns:1fr;margin-bottom:52px}.areaVisuals article{min-height:420px}.areaVisuals h3{font-size:28px}}
+.priceVisual{position:relative;height:230px;margin-bottom:28px;overflow:hidden;background:#071b34}
+.priceVisual:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,20,39,.9))}
+.priceVisual img{width:100%;height:100%;object-fit:cover;display:block}
+.priceVisual h3{position:absolute;z-index:1;left:22px;bottom:18px;margin:0;color:#fff;font-size:25px}
+@media(max-width:900px){.priceVisual{height:200px}}
+@media(max-width:640px){.priceVisual{height:250px;margin-bottom:20px}.priceVisual h3{font-size:24px}}

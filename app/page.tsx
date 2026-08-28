@@ -11,11 +11,7 @@ const programs = [
   ['PRIVATE', 'lock', '프라이빗 제모', '브라질리언 · 음낭 · 회음부 · 항문', '남성 전담 스태프와 독립 공간에서 위생과 프라이버시까지 세심하게'],
 ];
 
-const areaVisuals = [
-  ['chest-marble.png', 'CHEST', '가슴', '넓은 면적도 피부 반응을 살피며 균일하게'],
-  ['underarm-marble.png', 'UNDERARM', '겨드랑이', '굴곡과 마찰이 많은 부위까지 세심하게'],
-  ['private-marble.png', 'PRIVATE', '프라이빗', '말하기 어려운 부위일수록 더 정확하고 조심스럽게'],
-];
+const priceVisuals = ['face-marble.png', 'chest-marble.png', 'arm-marble.png', 'leg-marble.png', 'private-marble.png'];
 
 const priceGroups = [
   ['얼굴', [['인중', '15'], ['턱', '25'], ['목', '20'], ['볼', '20'], ['구레나룻', '20'], ['얼굴 전체', '50'], ['뒷목 헤어라인', '25']]],
@@ -76,11 +72,11 @@ export default function Home() {
 
     <section className="equipment"><div className="equipmentInner wrap"><div className="deviceStage"><img className="deviceLogo" src="./apogee-elite-plus-logo.png" alt="Apogee Elite Plus"/><img className="device" src="./apogee-elite-plus-device.png" alt="사이노슈어 아포지 엘리트 플러스 레이저 장비"/><small>CYNOSURE APOGEE ELITE+</small></div><div className="equipmentText"><p className="label sky">아포지 엘리트 플러스</p><h2>남성의 모근을 겨냥하는<br/>두 개의 정밀한 파장.</h2><p className="equipmentLead">아포지 엘리트 플러스의 755nm 알렉산드라이트와 1064nm 롱펄스 엔디야그를 피부 톤과 모질에 맞춰 선택합니다.</p><div className="specs"><div><strong>755<span>nm</span></strong><p>상대적으로 얕은 모근과 밝은 피부 타입에 효과적으로 접근</p></div><div><strong>1064<span>nm</span></strong><p>깊고 굵은 모근과 다양한 피부 톤을 고려한 롱펄스 파장</p></div></div><ul><li><b>24mm 대형 스팟</b><span>넓은 부위를 빠르고 균일하게 조사</span></li><li><b>연속 에어 쿨링</b><span>시술 전·중·후 피부 표면을 냉각</span></li><li><b>비접촉 방식</b><span>젤을 바르지 않는 쾌적한 시술</span></li></ul></div></div></section>
 
-    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="areaVisuals">{areaVisuals.map(([src, tag, title, text]) => <article key={tag}><img src={`./${src}`} alt={`${title} 제모 부위를 표현한 대리석 조형 이미지`}/><div><small>{tag}</small><h3>{title}</h3><p>{text}</p></div></article>)}</div><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div></article>)}</div></section>
+    <section className="program wrap" id="program"><header className="sectionTitle split"><div><p className="label blue">부위별 맞춤 프로그램</p><h2>보이는 곳부터<br/>말하기 어려운 곳까지.</h2></div><p>원하는 부위만 선택하거나 여러 부위를 함께 상담할 수 있습니다. 부위별 털의 굵기와 피부 민감도에 맞춰 계획합니다.</p></header><div className="programList">{programs.map(([tag, icon, title, parts, text], i) => <article key={tag}><div className="programIndex"><span>0{i + 1}</span><Icon name={icon as IconName}/></div><div className="programCopy"><small>{tag}</small><h3>{title}</h3><b>{parts}</b><p>{text}</p></div></article>)}</div></section>
 
     <section className="process"><div className="wrap"><header className="sectionTitle"><p className="label blue">남성 맞춤 5단계</p><h2>처음부터 끝까지<br/>안심할 수 있도록.</h2></header><ol>{process.map(([title, text], i) => <li key={title}><span>0{i + 1}</span><Icon name={(['consult','cream','laser','snow','guide'] as IconName[])[i]}/><h3>{title}</h3><p>{text}</p></li>)}</ol></div></section>
 
-    <section className="pricing wrap" id="price"><header className="sectionTitle split"><div><p className="label blue">비용 안내</p><h2>시술 부위별<br/>비용 안내</h2></div><p>표기 금액 단위는 만원입니다.<br/>개인의 상태와 실제 시술 범위에 따라 달라질 수 있습니다.</p></header><div className="priceTable">{priceGroups.map(([group, items]) => <section key={group}><h3>{group}</h3><div>{items.map(([name, price]) => <p key={name}><span>{name}</span><strong>{price}<small>만원</small></strong></p>)}</div></section>)}</div><a className="priceCta" href="#consultation">내게 맞는 부위 상담하기 <span>→</span></a></section>
+    <section className="pricing wrap" id="price"><header className="sectionTitle split"><div><p className="label blue">비용 안내</p><h2>시술 부위별<br/>비용 안내</h2></div><p>표기 금액 단위는 만원입니다.<br/>개인의 상태와 실제 시술 범위에 따라 달라질 수 있습니다.</p></header><div className="priceTable">{priceGroups.map(([group, items], i) => <section key={group}><div className="priceVisual"><img src={`./${priceVisuals[i]}`} alt={`${group} 제모 부위를 표현한 이미지`}/><h3>{group}</h3></div><div>{items.map(([name, price]) => <p key={name}><span>{name}</span><strong>{price}<small>만원</small></strong></p>)}</div></section>)}</div><a className="priceCta" href="#consultation">내게 맞는 부위 상담하기 <span>→</span></a></section>
 
     <section className="careGuide"><div className="wrap careColumns"><article><Icon name="before"/><span>시술 전 확인사항</span><h3>시술 전</h3><p>시술 1~2일 전 면도기로 가볍게 면도해 주세요. 털을 뽑거나 왁싱하면 레이저가 목표로 하는 모근이 사라질 수 있습니다. 최소 2주간 선탠과 과도한 야외 활동도 피해주세요.</p></article><article><Icon name="after"/><span>시술 후 관리</span><h3>시술 후</h3><p>당일 미온수 샤워는 가능하며 3~5일간 사우나·찜질방·격한 운동을 피해주세요. 노출 부위에는 자외선 차단제를 꼼꼼히 사용하고 이상 반응이 지속되면 의료진에게 문의하세요.</p></article></div></section>
 
