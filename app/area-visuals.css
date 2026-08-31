@@ -272,3 +272,4 @@ html,body{overflow-x:hidden}
 
 /* Keep the final information sections fully legible near the page end. */
 .careColumns article,.faq>.sectionTitle,.faq>.faqList,.consultation>*,.motion-ready .reveal .careColumns article,.motion-ready .faq.reveal>.sectionTitle,.motion-ready .faq.reveal>.faqList,.motion-ready .consultation.reveal>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
+.faq>.sectionTitle>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.faq>.sectionTitle h2{color:var(--ink)}
