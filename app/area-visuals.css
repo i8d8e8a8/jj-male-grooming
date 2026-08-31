@@ -132,7 +132,7 @@
 
 /* editorial scale + reliable cascading reveals */
 :root{--display-size:clamp(72px,7vw,112px);--section-size:clamp(52px,5.7vw,84px);--copy-size:17px}
-.hero h1{font-size:var(--display-size);line-height:.92;margin:34px 0 38px}
+.hero h1{font-size:var(--display-size);line-height:1;margin:34px 0 38px}
 .sectionTitle h2,.intro h2{font-size:var(--section-size);line-height:1.04}
 .strengths .sectionTitle h2,.equipmentText h2{font-size:clamp(50px,5vw,76px)}
 .programCopy h3{font-size:clamp(44px,4.2vw,62px)}
@@ -173,7 +173,7 @@
 
 @media(max-width:1200px) and (min-width:901px){.hero h1{font-size:clamp(68px,7.2vw,88px)}}
 @media(max-width:900px){.heroVisual{background:#071c38}.heroVisual>img{height:76%;object-position:center top}.intro,.program,.pricing,.videos,.process{padding-top:125px;padding-bottom:115px}}
-@media(max-width:640px){:root{--display-size:clamp(48px,14vw,62px);--section-size:clamp(42px,11vw,54px);--copy-size:15px}.hero h1{font-size:var(--display-size);line-height:.96}.heroVisual>img{height:72%;object-fit:contain}.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:16px}.strengths .sectionTitle h2,.equipmentText h2{font-size:clamp(40px,11vw,52px)}.programCopy h3{font-size:38px}.process h3{font-size:23px}.careColumns article,.careColumns article+article{min-height:430px;padding:55px 24px}.careColumns article:after,.careColumns article+article:after{background:linear-gradient(180deg,rgba(5,28,54,.91),rgba(5,28,54,.65))}.careColumns article+article .careContent{margin-left:0}.motion-ready .reveal :is(.label,h2,.sectionTitle>p,.introCopy>p:last-child),.motion-ready .reveal :is(.introFacts article,.strengthList article,.deviceStage,.equipmentText>*:not(.label),.equipmentEvolution header>*,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.priceCta,.careColumns article,.faq details,.consultation>*){transform:translateY(28px)}}
+@media(max-width:640px){:root{--display-size:clamp(48px,14vw,62px);--section-size:clamp(42px,11vw,54px);--copy-size:15px}.hero h1{font-size:var(--display-size);line-height:1.03}.heroVisual>img{height:72%;object-fit:contain}.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:16px}.strengths .sectionTitle h2,.equipmentText h2{font-size:clamp(40px,11vw,52px)}.programCopy h3{font-size:38px}.process h3{font-size:23px}.careColumns article,.careColumns article+article{min-height:430px;padding:55px 24px}.careColumns article:after,.careColumns article+article:after{background:linear-gradient(180deg,rgba(5,28,54,.91),rgba(5,28,54,.65))}.careColumns article+article .careContent{margin-left:0}.motion-ready .reveal :is(.label,h2,.sectionTitle>p,.introCopy>p:last-child),.motion-ready .reveal :is(.introFacts article,.strengthList article,.deviceStage,.equipmentText>*:not(.label),.equipmentEvolution header>*,.equipmentEvolution ol,.programList article,.videoGrid article,.videoNotes article,.process li,.priceTable>section,.priceCta,.careColumns article,.faq details,.consultation>*){transform:translateY(28px)}}
 @media(prefers-reduced-motion:reduce){.heroBrand,.heroCopy>.label,.heroCopy h1 span,.heroCopy>.lead,.heroCopy>.actions,.heroVisual>img,.heroPanel{animation:none!important}.motion-ready .reveal *{opacity:1!important;transform:none!important;transition:none!important}}
 
 /* centered storytelling and directional section choreography */
