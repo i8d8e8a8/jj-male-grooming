@@ -15,6 +15,22 @@ html = html
   .replace(/href="\.\/_next\/static\/css\/index\.[^"]+\.css"/g, `href="./_next/static/css/${cssFiles[0]}"`);
 
 html = html.replace('</body>', `<script data-static-faq>
+const revealRoot = document.querySelector('[data-reveal-root]');
+if (revealRoot && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const revealSections = [...revealRoot.querySelectorAll('section:not(.hero)')];
+  revealSections.forEach((section) => section.classList.add('reveal'));
+  revealRoot.classList.add('motion-ready');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }), { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    revealSections.forEach((section) => revealObserver.observe(section));
+  } else {
+    revealSections.forEach((section) => section.classList.add('is-visible'));
+  }
+}
 document.querySelectorAll('.faqQuestion').forEach((button) => button.addEventListener('click', () => {
   const item = button.closest('.faqItem');
   const answer = item.querySelector('.faqAnswer');

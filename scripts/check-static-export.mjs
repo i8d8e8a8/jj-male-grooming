@@ -69,6 +69,9 @@ await access(new URL('robots.txt', docs));
 await access(new URL('sitemap.xml', docs));
 
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
+for (const rule of ["revealRoot.classList.add('motion-ready')", "section.classList.add('reveal')", "entry.target.classList.add('is-visible')"]) {
+  if (!html.includes(rule)) throw new Error(`Missing static reveal motion: ${rule}`);
+}
 await access(new URL('strengths-hesitation.jpg', docs));
 
 console.log(`static export OK (${localAssets.length} linked assets)`);
