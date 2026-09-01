@@ -42,6 +42,7 @@ for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-
 for (const rule of ['.label{font-size:19px', '--copy-size:22px', '.heroInner{', 'width:min(1440px,100% - 96px)', 'min-aspect-ratio:12/5', 'width:min(1840px,100% - 96px)', '.heroVisual>img.heroDefault{display:none}', 'object-position:center 24%', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
 }
+if (!/\.priceTable \.priceVisual\{[^}]*display:block/.test(css)) throw new Error('price visual single-column layout missing');
 
 for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
   if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);

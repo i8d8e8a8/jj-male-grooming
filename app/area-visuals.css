@@ -4,7 +4,7 @@
 .heroVisual{inset:0 0 0 52%}
 .heroVisual>img{width:120%;max-width:none;transform:translateX(-17%)}
 .heroPanel{bottom:38px}
-.priceVisual{position:relative;height:230px;margin-bottom:28px;overflow:hidden;background:#071b34}
+.priceTable .priceVisual{position:relative;display:block;height:230px;margin-bottom:28px;overflow:hidden;background:#071b34}
 .introBody,.introCopy,.introFacts{min-width:0}
 .programList article{position:relative;min-height:300px;overflow:hidden}
 .programList .programVisualRight{padding-right:45%}
