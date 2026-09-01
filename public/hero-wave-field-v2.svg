@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 820" preserveAspectRatio="none">
   <defs>
     <radialGradient id="glow" cx="52%" cy="52%" r="58%">
-      <stop offset="0" stop-color="#147fc0" stop-opacity=".62"/>
-      <stop offset=".34" stop-color="#0a477d" stop-opacity=".42"/>
-      <stop offset=".72" stop-color="#061f3d" stop-opacity=".14"/>
+      <stop offset="0" stop-color="#4f91bb" stop-opacity=".46"/>
+      <stop offset=".18" stop-color="#174f78" stop-opacity=".5"/>
+      <stop offset=".48" stop-color="#0b3459" stop-opacity=".34"/>
+      <stop offset=".76" stop-color="#071f3a" stop-opacity=".12"/>
       <stop offset="1" stop-color="#020d1d" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="line" x1="0" x2="1">
       <stop offset="0" stop-color="#2f9ad8" stop-opacity="0"/>
-      <stop offset=".28" stop-color="#58b9ed" stop-opacity=".18"/>
-      <stop offset=".55" stop-color="#74cfff" stop-opacity=".52"/>
-      <stop offset=".78" stop-color="#318cc9" stop-opacity=".16"/>
+      <stop offset=".28" stop-color="#779db6" stop-opacity=".12"/>
+      <stop offset=".55" stop-color="#9bc3d9" stop-opacity=".38"/>
+      <stop offset=".78" stop-color="#527f9e" stop-opacity=".13"/>
       <stop offset="1" stop-color="#1c6ca8" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="shade" x1="0" x2="1">
@@ -21,7 +22,7 @@
       <stop offset="1" stop-color="#010812" stop-opacity=".78"/>
     </linearGradient>
   </defs>
-  <rect width="1920" height="820" fill="#051a34"/>
+  <rect width="1920" height="820" fill="#06182f"/>
   <rect width="1920" height="820" fill="url(#glow)"/>
   <g fill="none" stroke="url(#line)" stroke-linecap="round">
     <path d="M-130 625 C285 350 520 760 955 475 S1515 135 2050 365" stroke-width="3"/>
