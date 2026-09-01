@@ -364,14 +364,14 @@ html,body{overflow-x:hidden}
 }
 
 /* Separate subject and background so the wave field can breathe at every aspect ratio. */
-.heroVisual{background:#061b36;isolation:isolate}
-.heroVisual:before{content:"";position:absolute;z-index:0;inset:-40%;background:radial-gradient(circle at 45% 56%,rgba(21,126,210,.16),transparent 28%),repeating-radial-gradient(ellipse at 45% 56%,transparent 0 92px,rgba(77,170,238,.13) 93px 94px,transparent 95px 156px);transform:rotate(-7deg);animation:waveBreathe 8s ease-in-out infinite alternate}
-.heroVisual>img.heroCutout{display:block;position:absolute;z-index:1;right:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;opacity:.94}
-.heroVisual:after{z-index:2;background:linear-gradient(90deg,rgba(6,27,54,.96) 0%,rgba(6,27,54,.74) 37%,rgba(6,27,54,.16) 66%,transparent 82%),linear-gradient(0deg,rgba(3,20,41,.68),transparent 42%)}
-@keyframes waveBreathe{to{transform:rotate(-7deg) scale(1.035);opacity:.76}}
+.heroVisual{background:radial-gradient(ellipse at 51% 52%,#0b5791 0%,#073562 25%,#061b36 58%,#031226 100%);isolation:isolate}
+.heroVisual:before{content:"";position:absolute;z-index:0;inset:-45%;background:repeating-radial-gradient(ellipse at 48% 56%,transparent 0 74px,rgba(52,163,242,.12) 76px,rgba(70,183,255,.5) 79px,rgba(36,132,214,.22) 83px,transparent 89px 134px);transform:rotate(-9deg) scale(1.04);animation:waveBreathe 5.5s cubic-bezier(.45,0,.25,1) infinite alternate}
+.heroVisual>img.heroCutout{display:block;position:absolute;z-index:1;right:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;opacity:.96;-webkit-mask:url('../../../hero-david-cutout-v1.png') right bottom/auto 100% no-repeat;mask:url('../../../hero-david-cutout-v1.png') right bottom/auto 100% no-repeat}
+.heroVisual:after{z-index:2;background:linear-gradient(90deg,rgba(2,15,32,.9) 0%,rgba(4,24,47,.42) 24%,transparent 47%,rgba(3,21,42,.12) 68%,rgba(1,11,24,.66) 100%),linear-gradient(0deg,rgba(2,16,34,.72),transparent 44%)}
+@keyframes waveBreathe{to{transform:rotate(-5deg) translate3d(3.5%, -1.5%, 0) scale(1.1);opacity:.82}}
 
 @media(max-width:640px){
-  .heroVisual:before{inset:-25% -95%;background:radial-gradient(circle at 45% 44%,rgba(21,126,210,.14),transparent 25%),repeating-radial-gradient(ellipse at 45% 44%,transparent 0 68px,rgba(77,170,238,.12) 69px 70px,transparent 71px 116px)}
+  .heroVisual:before{inset:-25% -95%;background:repeating-radial-gradient(ellipse at 45% 44%,transparent 0 52px,rgba(52,163,242,.13) 54px,rgba(70,183,255,.42) 57px,rgba(36,132,214,.18) 60px,transparent 66px 102px)}
   .heroVisual>img.heroCutout{right:-220px;height:100%}
-  .heroVisual:after{background:linear-gradient(90deg,rgba(6,27,54,.68),rgba(6,27,54,.04) 80%),linear-gradient(0deg,rgba(3,20,41,.78),transparent 55%)}
+  .heroVisual:after{background:linear-gradient(90deg,rgba(2,15,32,.7),transparent 52%,rgba(1,11,24,.34)),linear-gradient(0deg,rgba(3,20,41,.78),transparent 55%)}
 }

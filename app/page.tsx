@@ -80,7 +80,7 @@ export default function Home() {
   };
   return <main data-reveal-root><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><RevealMotion/>
     <section className="hero">
-      <div className="heroVisual" aria-label="파장 위에 배치된 남성 턱선 조각상"><img className="heroCutout" src="./hero-david-cutout-v1.png" alt="청색 레이저 선이 턱선을 따라 흐르는 남성 조각상"/></div>
+      <div className="heroVisual" aria-label="파장 위에 배치된 남성 턱선 조각상"><img className="heroCutout" src="./hero-david-cutout-v2.png" alt="청색 레이저 선이 턱선을 따라 흐르는 남성 조각상"/></div>
       <div className="heroInner">
         <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>UROLOGY</span></div>
         <div className="heroContent">
