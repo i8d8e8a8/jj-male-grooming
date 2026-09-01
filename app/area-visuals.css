@@ -71,7 +71,7 @@
 .programList article:nth-child(2) .programVisual img{object-position:58% center}
 .programList article:nth-child(3) .programVisual img{object-position:58% center;transform:scale(1.04)}
 .programList article:nth-child(3):hover .programVisual img{transform:scale(1.065)}
-.equipmentEvolution ol:before{content:"";grid-column:1/-1;display:block;aspect-ratio:16/9;background:url('https://i8d8e8a8.github.io/jj-male-grooming/cynosure-product-lineage.png') center/cover no-repeat;border:1px solid #ffffff24}
+.equipmentEvolution ol:before{content:"";grid-column:1/-1;display:block;aspect-ratio:16/9;background:url('../../../cynosure-product-lineage.webp') center/cover no-repeat;border:1px solid #ffffff24}
 .equipmentEvolution li{min-height:235px}.equipmentEvolution li:after{display:none}.equipmentEvolution small{margin-top:31px}
 
 /* centered visual introduction */
@@ -110,9 +110,9 @@
 .introFacts article{position:relative;overflow:hidden;isolation:isolate;background:#f8fafc}
 .introFacts article:before{content:"";position:absolute;z-index:-2;inset:0;background-position:72% center;background-size:cover;background-repeat:no-repeat;opacity:.26;filter:saturate(.72) contrast(.94);transition:opacity .45s ease,transform .7s cubic-bezier(.16,1,.3,1)}
 .introFacts article:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.94) 48%,rgba(255,255,255,.48) 78%,rgba(255,255,255,.14) 100%)}
-.introFacts article:nth-child(1):before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/program-body-organic-v10.png');background-position:74% 46%}
-.introFacts article:nth-child(2):before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/program-face-symbol-v3.png');background-position:76% 58%}
-.introFacts article:nth-child(3):before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/program-private-valley-v3.png');background-position:76% 56%}
+.introFacts article:nth-child(1):before{background-image:url('../../../program-body-organic-v10.webp');background-position:74% 46%}
+.introFacts article:nth-child(2):before{background-image:url('../../../program-face-symbol-v3.webp');background-position:76% 58%}
+.introFacts article:nth-child(3):before{background-image:url('../../../program-private-valley-v3.webp');background-position:76% 56%}
 .introFacts article:hover:before{opacity:.36;transform:scale(1.04)}
 .introFacts article>*{position:relative;z-index:1}
 .introFacts article:hover .icon,.process li:hover .icon{transform:translateY(-4px) rotate(-3deg);color:#1682d4}.icon{transition:transform .4s cubic-bezier(.2,.75,.2,1),color .3s ease}
@@ -164,8 +164,8 @@
 
 .careColumns article,.careColumns article+article{position:relative;min-height:500px;overflow:hidden;isolation:isolate;color:#fff;padding:76px clamp(38px,5vw,76px)}
 .careColumns article:before{content:"";position:absolute;z-index:-2;inset:0;background:center/cover no-repeat;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
-.careColumns article:first-child:before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/care-before-shaving.jpg');background-position:60% center}
-.careColumns article:last-child:before{background-image:url('https://i8d8e8a8.github.io/jj-male-grooming/care-after-sunscreen.jpg');background-position:38% bottom;background-size:auto 155%}
+.careColumns article:first-child:before{background-image:url('../../../care-before-shaving.webp');background-position:60% center}
+.careColumns article:last-child:before{background-image:url('../../../care-after-sunscreen.webp');background-position:38% bottom;background-size:auto 155%}
 .careColumns article:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(5,28,54,.94) 0%,rgba(5,28,54,.8) 48%,rgba(5,28,54,.22) 100%)}
 .careColumns article+article:after{background:linear-gradient(90deg,rgba(5,28,54,.94) 0%,rgba(5,28,54,.8) 48%,rgba(5,28,54,.22) 100%)}
 .careColumns article:hover:before{transform:scale(1.035)}
@@ -181,7 +181,7 @@
 .introCopy>.label{width:100%;margin:0 auto;text-align:center!important;display:block}
 .introCopy h2,.introCopy>p:last-child{width:100%;text-align:center}
 
-.strengths:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,28,56,.98) 0%,rgba(7,28,56,.9) 48%,rgba(7,28,56,.46) 100%),url('https://i8d8e8a8.github.io/jj-male-grooming/strengths-hesitation.jpg') 72% center/cover no-repeat;opacity:.72}
+.strengths:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,28,56,.98) 0%,rgba(7,28,56,.9) 48%,rgba(7,28,56,.46) 100%),url('../../../strengths-hesitation.webp') 72% center/cover no-repeat;opacity:.72}
 .strengths:after{z-index:0}.strengthsInner{z-index:1}
 
 .motion-ready .program.reveal .programList article{opacity:0;transform:translateX(var(--reveal-x));transition:opacity .95s cubic-bezier(.16,1,.3,1),transform .95s cubic-bezier(.16,1,.3,1);transition-delay:var(--stagger)}
@@ -236,7 +236,7 @@
 .faqItem .faqAnswer,.faqItem .faqQuestion i{animation:none!important}
 
 @media(max-width:900px){.process ol{grid-template-columns:1fr 1fr;gap:42px 0}.process ol:before{display:none}.process li:last-child{grid-column:1/-1;max-width:360px;margin:auto}.strengths:before{background-position:68% center;opacity:.5}}
-@media(max-width:640px){.motion-ready .program.reveal .programList article{transform:translateX(calc(var(--reveal-x) * .48))}.process .sectionTitle{margin-bottom:52px}.process ol{grid-template-columns:1fr;gap:38px}.process li,.process li:last-child{max-width:360px;margin:auto}.process li p{grid-column:auto}.strengths:before{background:linear-gradient(180deg,rgba(7,28,56,.96),rgba(7,28,56,.76)),url('https://i8d8e8a8.github.io/jj-male-grooming/strengths-hesitation.jpg') 66% center/cover no-repeat}.faq>*,.motion-ready .faq.reveal>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.faqItem:hover,.faqItem:focus{transform:none}.faqQuestion{grid-template-columns:35px 1fr auto}.faqAnswer p{padding-left:35px;padding-right:20px}}
+@media(max-width:640px){.motion-ready .program.reveal .programList article{transform:translateX(calc(var(--reveal-x) * .48))}.process .sectionTitle{margin-bottom:52px}.process ol{grid-template-columns:1fr;gap:38px}.process li,.process li:last-child{max-width:360px;margin:auto}.process li p{grid-column:auto}.strengths:before{background:linear-gradient(180deg,rgba(7,28,56,.96),rgba(7,28,56,.76)),url('../../../strengths-hesitation.webp') 66% center/cover no-repeat}.faq>*,.motion-ready .faq.reveal>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.faqItem:hover,.faqItem:focus{transform:none}.faqQuestion{grid-template-columns:35px 1fr auto}.faqAnswer p{padding-left:35px;padding-right:20px}}
 
 /* Apogee Elite+ editorial product stage */
 .equipment{position:relative;overflow:hidden;isolation:isolate}
@@ -369,7 +369,7 @@ html,body{overflow-x:hidden}
 /* Separate subject and background so the wave field can breathe at every aspect ratio. */
 .heroVisual{background:#06182f url('../../../hero-wave-field-v2.svg') center/cover no-repeat;isolation:isolate}
 .heroVisual:before{content:"";position:absolute;z-index:0;inset:-8%;background:radial-gradient(ellipse at 52% 54%,rgba(99,151,184,.16),rgba(22,76,113,.06) 30%,transparent 51%);animation:waveBreathe 7s ease-in-out infinite alternate}
-.heroVisual>img.heroCutout{display:block;position:absolute;z-index:1;right:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;opacity:.96;-webkit-mask:url('../../../hero-david-cutout-v1.png') right bottom/auto 100% no-repeat;mask:url('../../../hero-david-cutout-v1.png') right bottom/auto 100% no-repeat}
+.heroVisual>img.heroCutout{display:block;position:absolute;z-index:1;right:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;opacity:.96;-webkit-mask:url('../../../hero-david-cutout-v1.webp') right bottom/auto 100% no-repeat;mask:url('../../../hero-david-cutout-v1.webp') right bottom/auto 100% no-repeat}
 .heroVisual:after{z-index:2;background:linear-gradient(90deg,rgba(2,15,32,.9) 0%,rgba(4,24,47,.42) 24%,transparent 47%,rgba(3,21,42,.12) 68%,rgba(1,11,24,.66) 100%),linear-gradient(0deg,rgba(2,16,34,.72),transparent 44%)}
 @keyframes waveBreathe{to{transform:translate3d(2.5%, -1%, 0) scale(1.06);opacity:.68}}
 
@@ -397,4 +397,9 @@ html,body{overflow-x:hidden}
   .heroBrand span,.introFacts span,.strengthList article>span:first-child,.programIndex>span,.process li>span:first-child,.faqQuestion span,.clinicInfo{font-size:16px}
   .button,.quietLink,.programCopy b,.priceTable p,.priceCta{font-size:18px}
   .programCopy>small,.videoGrid small,.deviceTitle small,.deviceCaption,.equipmentEvolution li>span,.equipmentEvolution small,.careColumns article>span:not(.icon){font-size:15px}
+  .specs p{font-size:16px;line-height:1.65}
+  .equipmentText li span{font-size:16px;line-height:1.6}
+  .mobileBar a{font-size:16px}
 }
+
+.faqQuestion span{color:#5f6f80}
