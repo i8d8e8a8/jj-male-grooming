@@ -80,7 +80,7 @@ export default function Home() {
   };
   return <main data-reveal-root><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><RevealMotion/>
     <section className="hero">
-      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img src="./hero-male-wide-v2.png" alt="자연스러운 피부결의 남성 측면 인물"/></div>
+      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img className="heroDefault" src="./hero-male-wide-v2.png" alt="자연스러운 피부결의 남성 측면 인물"/><img className="heroUltra" src="./hero-male-ultrawide-v1.png" alt=""/></div>
       <div className="heroInner">
         <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>UROLOGY</span></div>
         <div className="heroContent">

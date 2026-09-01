@@ -346,10 +346,13 @@ html,body{overflow-x:hidden}
 
 /* Preserve the full portrait on ultrawide displays instead of cropping it into an abstract neck detail. */
 @media(min-width:1800px) and (min-aspect-ratio:12/5){
-  .heroInner{width:min(1680px,calc(100% - 112px))}
-  .heroContent{grid-template-columns:minmax(620px,700px) minmax(520px,1fr);gap:80px}
-  .heroVisual>img{position:absolute;left:50%;right:auto;bottom:0;width:auto;max-width:none;height:100%;margin:0;object-fit:contain;object-position:center bottom;filter:brightness(1.28) contrast(1.06);opacity:1}
-  .heroVisual:after{background:linear-gradient(90deg,var(--navy) 0 40%,rgba(7,28,56,.72) 48%,transparent 60%)}
+  .heroInner{width:min(1840px,calc(100% - 96px))}
+  .heroContent{grid-template-columns:minmax(660px,740px) minmax(560px,1fr);gap:80px}
+  .heroVisual>img.heroDefault{display:none}
+  .heroVisual>img.heroUltra{display:block;position:absolute;inset:0;width:100%;max-width:none;height:100%;margin:0;object-fit:cover;object-position:center bottom;filter:none;opacity:1}
+  .heroVisual:after{background:linear-gradient(90deg,rgba(7,28,56,.42) 0%,rgba(7,28,56,.2) 42%,transparent 64%),linear-gradient(0deg,rgba(3,23,45,.5) 0%,transparent 38%)}
 }
 
 @media(min-width:901px) and (max-aspect-ratio:12/5){.heroVisual>img{object-position:center 24%}}
+.heroVisual>img.heroUltra{display:none}
+@media(min-width:1800px) and (min-aspect-ratio:12/5){.heroVisual>img.heroUltra{display:block}}
