@@ -376,3 +376,22 @@ html,body{overflow-x:hidden}
   .heroVisual>img.heroCutout{right:-220px;height:100%}
   .heroVisual:after{background:linear-gradient(90deg,rgba(2,15,32,.7),transparent 52%,rgba(1,11,24,.34)),linear-gradient(0deg,rgba(3,20,41,.78),transparent 55%)}
 }
+
+/* Open up all supporting typography while leaving display headings unchanged. */
+:root{--copy-size:22px}
+.label{font-size:19px}
+.heroBrand span,.heroPanel>span,.heroPanel dd,.introFacts span,.strengthList article>span:first-child,.programIndex>span,.process li>span:first-child,.faqQuestion span,.clinicInfo{font-size:18px}
+.button,.quietLink,.heroPanel dt,.programCopy b,.priceTable p,.priceCta{font-size:19px}
+.lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:22px}
+.programCopy>small,.videoGrid small,.deviceTitle small,.deviceCaption,.equipmentEvolution li>span,.equipmentEvolution small,.careColumns article>span:not(.icon){font-size:16px}
+.introFacts strong,.videoNotes h3{font-size:21px}.videoGrid h3{font-size:24px}.faqQuestion b{font-size:20px}
+.priceTable strong{font-size:21px}.priceTable small{font-size:16px}.heroPanel>strong{font-size:30px}
+
+@media(max-width:640px){
+  :root{--copy-size:19px}
+  .label{font-size:17px}
+  .lead,.introCopy>p:last-child,.equipmentLead,.programCopy p,.sectionTitle.split>p,.privacyLead{font-size:19px}
+  .heroBrand span,.introFacts span,.strengthList article>span:first-child,.programIndex>span,.process li>span:first-child,.faqQuestion span,.clinicInfo{font-size:16px}
+  .button,.quietLink,.programCopy b,.priceTable p,.priceCta{font-size:18px}
+  .programCopy>small,.videoGrid small,.deviceTitle small,.deviceCaption,.equipmentEvolution li>span,.equipmentEvolution small,.careColumns article>span:not(.icon){font-size:15px}
+}
