@@ -43,7 +43,7 @@
 .quietLink:hover{opacity:.72}.programList article:hover .programVisual img,.priceTable>section:hover .priceVisual img{transform:scale(1.025)}
 @supports (animation-timeline:view()){
   .introBody,.strengthsInner,.equipmentInner,.program .sectionTitle,.programList article,.videos .sectionTitle,.videoGrid article,.videoNotes article,.process .sectionTitle,.process li,.pricing .sectionTitle,.priceTable>section,.careColumns article,.faq>*,.consultation>*{animation:revealUp linear both;animation-timeline:view();animation-range:entry 8% cover 28%}
-  .programVisual,.priceVisual{animation:revealImage linear both;animation-timeline:view();animation-range:entry 5% cover 26%}
+  .programVisual{animation:revealImage linear both;animation-timeline:view();animation-range:entry 5% cover 26%}
 }
 @media(max-width:1200px) and (min-width:901px){.hero{grid-template-columns:minmax(470px,52%) 1fr}.hero h1{font-size:clamp(58px,6.1vw,76px)}.intro{grid-template-columns:130px 1fr;gap:38px}.introBody{gap:5vw}.programList .programVisualRight{padding-right:42%}.programList .programVisualLeft{padding-left:42%}.programVisualRight .programVisual{inset:0 0 0 60%}.programVisualLeft .programVisual{inset:0 60% 0 0}.videoGrid{gap:18px}.videoGrid h3{font-size:18px}}
 @media(max-width:900px) and (min-width:641px){.wrap{width:min(100% - 64px,760px)}.heroCopy{max-width:680px}.intro,.program,.pricing{padding:110px 0}.programVisual{height:300px}.videoGrid{grid-template-columns:repeat(2,1fr)}.videoGrid article:first-child{grid-column:1/-1}.videoGrid article:first-child .videoFrame{max-width:760px}.priceTable{grid-template-columns:1fr}.careColumns article{padding-top:70px;padding-bottom:70px}}

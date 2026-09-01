@@ -45,6 +45,7 @@ for (const rule of ['.label{font-size:19px', '--copy-size:22px', '.heroInner{', 
 if (!/\.priceTable \.priceVisual\{[^}]*display:block/.test(css)) throw new Error('price visual single-column layout missing');
 if (!html.includes('private-marble-wide-v2.png')) throw new Error('wide private price visual missing');
 if (/\.priceTable section:nth-child\(5\) \.priceVisual/.test(css)) throw new Error('private price visual must use the shared card layout');
+if (/\.programVisual,\.priceVisual\{animation:revealImage/.test(css)) throw new Error('price visual reveal animation must not crop cards');
 
 for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
   if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);
