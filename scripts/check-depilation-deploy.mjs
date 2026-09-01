@@ -6,13 +6,13 @@ const read = file => readFile(path.join(root, file), 'utf8');
 const [one, two, info, areas, infoCss, areasCss] = await Promise.all([
   read('UPLOAD_TO_WEB_ROOT/child/sub/depilation/1.php'), read('UPLOAD_TO_WEB_ROOT/child/sub/depilation/2.php'),
   read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-info.html'), read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-areas.html'),
-  read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-info.css'), read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-areas.css'),
+  read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-info.css'), read('UPLOAD_TO_WEB_ROOT/child/sub/landing/male-grooming/depilation-areas-v2.css'),
 ]);
 const checks = [
   one.includes('depilation-info.html'), two.includes('depilation-areas.html'),
   info.includes('/depilation/1.php') && areas.includes('/depilation/2.php'),
   infoCss.includes('.program') && infoCss.includes('.pricing'),
-  areasCss.includes('.careGuide') && areasCss.includes('.faq'),
+  areasCss.includes('.hero') && areasCss.includes('.careGuide') && areasCss.includes('.faq'),
   !areasCss.includes('.program') && !areasCss.includes('.pricing'),
 ];
 if (checks.includes(false)) throw new Error(`depilation deployment check failed: ${checks}`);
