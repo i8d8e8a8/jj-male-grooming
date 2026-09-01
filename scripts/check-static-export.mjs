@@ -39,13 +39,15 @@ for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
 
-for (const rule of ['.label{font-size:17px', '--copy-size:20px', '.heroPanel{left:56%;right:6%}', 'object-position:center bottom', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
+for (const rule of ['.label{font-size:17px', '--copy-size:20px', '.heroInner{', 'width:min(1440px,100% - 96px)', 'object-position:center bottom', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
 }
 
 for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
   if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);
 }
+
+if (!html.includes('<div class="heroInner">') || !html.includes('<div class="heroContent">')) throw new Error('Hero content must share one centered layout canvas');
 
 for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clamp(52px,5.7vw,84px)', '.reveal.is-visible', '--stagger']) {
   if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);

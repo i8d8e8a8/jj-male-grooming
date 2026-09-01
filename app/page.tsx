@@ -80,9 +80,14 @@ export default function Home() {
   };
   return <main data-reveal-root><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><RevealMotion/>
     <section className="hero">
-      <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>UROLOGY</span></div>
-      <div className="heroCopy"><p className="label">남성 레이저 제모</p><h1><span>남자의 제모는</span><span>달라야 합니다.</span></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>
-      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img src="./hero-male-wide-v2.png" alt="자연스러운 피부결의 남성 측면 인물"/><div className="heroPanel"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div></div>
+      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img src="./hero-male-wide-v2.png" alt="자연스러운 피부결의 남성 측면 인물"/></div>
+      <div className="heroInner">
+        <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>UROLOGY</span></div>
+        <div className="heroContent">
+          <div className="heroCopy"><p className="label">남성 레이저 제모</p><h1><span>남자의 제모는</span><span>달라야 합니다.</span></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>
+          <div className="heroPanel"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div>
+        </div>
+      </div>
     </section>
 
     <section className="intro wrap"><div className="introCopy"><p className="label blue">왜 비뇨의학과인가</p><h2>남성의 굵고 깊은 털,<br/>남성을 잘 아는 곳에서.</h2><p>남성 체모는 모근의 깊이와 밀도, 부위별 피부 특성이 다릅니다.<br/>신체 구조부터 민감도까지 이해하는 계획이 중요합니다.</p></div><div className="introFacts"><article><span>01</span><Icon name="body"/><strong>남성 신체 구조</strong><p>얼굴부터 프라이빗 부위까지<br/>구조와 피부 특성을 고려합니다.</p></article><article><span>02</span><Icon name="laser"/><strong>굵고 깊은 모근</strong><p>부위별 밀도와 깊이에 맞춰<br/>파장과 출력을 설정합니다.</p></article><article><span>03</span><Icon name="lock"/><strong>민감 부위 진료 경험</strong><p>말하기 어려운 부위도 익숙하고<br/>편안하게 안내합니다.</p></article></div></section>
