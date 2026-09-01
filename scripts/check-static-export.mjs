@@ -49,7 +49,7 @@ for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 �
 
 if (!html.includes('<div class="heroInner">') || !html.includes('<div class="heroContent">')) throw new Error('Hero content must share one centered layout canvas');
 if (!html.includes('hero-david-cutout-v2.png') || !sourceCss.includes("mask:url('../../../hero-david-cutout-v1.png')")) throw new Error('Missing refined hero subject or verified alpha mask');
-if (!sourceCss.includes('repeating-radial-gradient(ellipse at 48% 56%') || !sourceCss.includes('grid-template-columns:650px minmax(520px,846px)')) throw new Error('Missing responsive wave field or stable desktop hero grid');
+if (!sourceCss.includes("hero-wave-field-v2.svg') center/cover") || !sourceCss.includes('grid-template-columns:650px minmax(520px,846px)')) throw new Error('Missing refined wave field or stable desktop hero grid');
 
 for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clamp(52px,5.7vw,84px)', '.reveal.is-visible', '--stagger']) {
   if (!css.includes(rule)) throw new Error(`Missing editorial type or cascade rule: ${rule}`);

@@ -60,6 +60,7 @@ await cp(new URL('../public/hero-male-wide-v2.png', import.meta.url), new URL('h
 await cp(new URL('../public/hero-male-ultrawide-v1.png', import.meta.url), new URL('hero-male-ultrawide-v1.png', docs));
 await cp(new URL('../public/hero-david-cutout-v1.png', import.meta.url), new URL('hero-david-cutout-v1.png', docs));
 await cp(new URL('../public/hero-david-cutout-v2.png', import.meta.url), new URL('hero-david-cutout-v2.png', docs));
+await cp(new URL('../public/hero-wave-field-v2.svg', import.meta.url), new URL('hero-wave-field-v2.svg', docs));
 await cp(new URL('../public/face-marble.png', import.meta.url), new URL('face-marble.png', docs));
 await cp(new URL('../public/face-marble-v2.png', import.meta.url), new URL('face-marble-v2.png', docs));
 await cp(new URL('../public/chest-marble.png', import.meta.url), new URL('chest-marble.png', docs));
