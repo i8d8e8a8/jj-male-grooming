@@ -7,13 +7,21 @@ let html = await readFile(indexPath, 'utf8');
 html = html
   .replaceAll('https://i8d8e8a8.github.io/jj-male-grooming/', 'https://jj-man.co.kr/child/sub/landing/')
   .replace('</head>', '<link rel="stylesheet" href="./production-overrides.css"/></head>')
-  .replace('</body>', '<script src="./frame-resize-grooming.js"></script></body>');
+  .replace('</body>', '<script src="./frame-resize-grooming-v2.js"></script></body>');
 await writeFile(indexPath, html);
 
-await writeFile(path.join(root, 'frame-resize-grooming.js'), `(function(){
+await writeFile(path.join(root, 'frame-resize-grooming-v2.js'), `(function(){
   function reportHeight(){
     var height=Math.max(document.documentElement.scrollHeight,document.documentElement.offsetHeight,document.body?document.body.scrollHeight:0,document.body?document.body.offsetHeight:0);
-    if(window.parent!==window&&height>0)window.parent.postMessage({type:'jj-grooming-frame-height',height:height},window.location.origin);
+    if(window.parent!==window&&height>0){
+      try{
+        if(window.frameElement){
+          window.frameElement.style.setProperty('height',Math.ceil(height)+'px','important');
+          window.frameElement.style.setProperty('min-height',Math.ceil(height)+'px','important');
+        }
+      }catch(error){}
+      window.parent.postMessage({type:'jj-grooming-frame-height',height:height},window.location.origin);
+    }
   }
   window.addEventListener('load',reportHeight);
   window.addEventListener('resize',reportHeight);
