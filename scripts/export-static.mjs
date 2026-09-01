@@ -31,15 +31,30 @@ if (revealRoot && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     revealSections.forEach((section) => section.classList.add('is-visible'));
   }
 }
-document.querySelectorAll('.faqQuestion').forEach((button) => button.addEventListener('click', () => {
-  const item = button.closest('.faqItem');
-  const answer = item.querySelector('.faqAnswer');
-  const visuallyOpen = getComputedStyle(answer).gridTemplateRows !== '0px';
-  const opening = item.classList.contains('is-closed') || (!item.classList.contains('is-open') && !visuallyOpen);
-  item.classList.toggle('is-open', opening);
-  item.classList.toggle('is-closed', !opening);
-  button.setAttribute('aria-expanded', String(opening));
-}));
+const closeFaqItem = (item) => {
+  item.classList.remove('is-open');
+  item.classList.add('is-closed');
+  item.querySelector('.faqQuestion').setAttribute('aria-expanded', 'false');
+};
+const openFaqItem = (item) => {
+  item.classList.add('is-open');
+  item.classList.remove('is-closed');
+  item.querySelector('.faqQuestion').setAttribute('aria-expanded', 'true');
+};
+const faqItems = [...document.querySelectorAll('.faqItem')];
+faqItems.forEach((item) => {
+  const button = item.querySelector('.faqQuestion');
+  item.addEventListener('pointerenter', () => openFaqItem(item));
+  item.addEventListener('pointerleave', () => closeFaqItem(item));
+  button.addEventListener('click', (event) => {
+    if (event.detail > 0) openFaqItem(item);
+    else item.classList.contains('is-open') ? closeFaqItem(item) : openFaqItem(item);
+  });
+});
+const faqVisibilityObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+  entries.forEach((entry) => { if (!entry.isIntersecting) closeFaqItem(entry.target); });
+}, { threshold: 0.12 }) : null;
+faqItems.forEach((item) => faqVisibilityObserver?.observe(item));
 const mobileBar = document.querySelector('.mobileBar');
 const consultation = document.querySelector('.consultation');
 if (mobileBar && consultation) {
