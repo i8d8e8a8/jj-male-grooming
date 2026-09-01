@@ -68,6 +68,9 @@ for (const copy of ['faqItem', 'faqQuestion', 'faqAnswer']) {
   if (!html.includes(copy)) throw new Error(`Missing static FAQ answer interaction: ${copy}`);
 }
 if (!html.includes('data-static-faq')) throw new Error('Missing static FAQ toggle script');
+for (const behavior of ["addEventListener('pointerleave'", "faqVisibilityObserver", "closeFaqItem"]) {
+  if (!html.includes(behavior)) throw new Error(`Missing FAQ auto-close behavior: ${behavior}`);
+}
 for (const rule of ["mobileBar.classList.toggle('is-hidden'", "new IntersectionObserver", '.mobileBar.is-hidden']) {
   if (!(html + sourceCss).includes(rule)) throw new Error(`Missing mobile footer collision fix: ${rule}`);
 }
