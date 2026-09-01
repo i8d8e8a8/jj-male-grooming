@@ -39,7 +39,7 @@ for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
 
-for (const rule of ['.label{font-size:15px', '--copy-size:18px', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
+for (const rule of ['.label{font-size:17px', '--copy-size:20px', '.heroPanel{left:56%;right:6%}', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
 }
 
