@@ -29,7 +29,7 @@ const videoNotes = [
   ['민감 부위도 빠르고 비접촉으로', '아포지 엘리트 플러스의 비접촉 조사 방식으로 넓거나 민감한 부위도 위생적으로 진행합니다.'],
 ];
 
-const priceVisuals = ['face-marble-v2.webp', 'chest-marble-v2.webp', 'arm-marble.webp', 'leg-marble-v4.webp', 'private-marble.webp'];
+const priceVisuals = ['face-marble-v2.webp', 'chest-marble-v2.webp', 'arm-marble.webp', 'leg-marble-v4.webp', 'private-marble-wide-v2.png'];
 
 const priceGroups = [
   ['얼굴', [['인중', '15'], ['턱', '25'], ['목', '20'], ['볼', '20'], ['구레나룻', '20'], ['얼굴 전체', '50'], ['뒷목 헤어라인', '25']]],

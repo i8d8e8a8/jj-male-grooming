@@ -43,8 +43,8 @@ for (const rule of ['.label{font-size:19px', '--copy-size:22px', '.heroInner{', 
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
 }
 if (!/\.priceTable \.priceVisual\{[^}]*display:block/.test(css)) throw new Error('price visual single-column layout missing');
-if (!/\.priceTable section:nth-child\(5\) \.priceVisual img\{[^}]*object-fit:contain/.test(css)) throw new Error('private price visual fit rule missing');
-if (!/\.priceTable section:nth-child\(5\) \.priceVisual:before\{[^}]*private-marble[^)}]*\.webp/.test(css)) throw new Error('private price visual background fill missing');
+if (!html.includes('private-marble-wide-v2.png')) throw new Error('wide private price visual missing');
+if (/\.priceTable section:nth-child\(5\) \.priceVisual/.test(css)) throw new Error('private price visual must use the shared card layout');
 
 for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
   if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);
@@ -93,7 +93,7 @@ for (const asset of [
   'chest-marble-v2.webp',
   'arm-marble.webp',
   'leg-marble-v4.webp',
-  'private-marble.webp',
+  'private-marble-wide-v2.png',
 ]) {
   if (!html.includes(asset)) throw new Error(`Missing optimized image reference: ${asset}`);
   await access(new URL(asset, docs));

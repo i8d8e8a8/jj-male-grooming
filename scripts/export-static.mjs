@@ -94,6 +94,7 @@ await cp(new URL('../public/chest-marble-v2.webp', import.meta.url), new URL('ch
 await cp(new URL('../public/arm-marble.webp', import.meta.url), new URL('arm-marble.webp', docs));
 await cp(new URL('../public/leg-marble-v4.webp', import.meta.url), new URL('leg-marble-v4.webp', docs));
 await cp(new URL('../public/private-marble.webp', import.meta.url), new URL('private-marble.webp', docs));
+await cp(new URL('../public/private-marble-wide-v2.png', import.meta.url), new URL('private-marble-wide-v2.png', docs));
 await cp(new URL('../public/program-face-abstract.png', import.meta.url), new URL('program-face-abstract.png', docs));
 await cp(new URL('../public/program-body-abstract.png', import.meta.url), new URL('program-body-abstract.png', docs));
 await cp(new URL('../public/program-body-abstract-v2.png', import.meta.url), new URL('program-body-abstract-v2.png', docs));
