@@ -19,9 +19,8 @@
 | App source has no lint errors | `pnpm exec eslint app --max-warnings 20` | PASS, 0 errors; 7 existing warnings |
 | Mobile viewport has no horizontal overflow or broken loaded images | Browser check at 390×844 | PASS |
 | Mobile supporting copy and sticky actions meet the new floor | Computed style check | PASS, 16px minimum for audited items |
-| Image delivery and SEO remain healthy | Lighthouse mobile on production build | PASS: 1,019 KiB total; Accessibility 100; Best Practices 100; SEO 100 |
+| Image delivery and SEO remain healthy | Lighthouse mobile on public Pages at `73e0eda` | PASS: all four categories 100; 601 KiB total; LCP 1.7s |
 
 ## Known gap
 
-- Lighthouse performance was 77 on the local Vinext production server because the CSS-composited hero remained the LCP element at 5.3s. The prior public Pages audit measured a materially faster LCP; the public deployment must be measured again after Pages publishes this commit.
-- Responsive image variants could save a further estimated 194 KiB, but were intentionally deferred because the current WebP payload is already close to 1 MiB and extra variants would add static-export complexity.
+- Responsive image variants could save a further estimated 194 KiB, but were intentionally deferred because the public payload is already 601 KiB and extra variants would add static-export complexity.
