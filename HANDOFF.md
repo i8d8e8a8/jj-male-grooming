@@ -133,6 +133,10 @@ git push github main
 - 큰 디스플레이 제목은 유지하고 작은 글자만 확대한다. 데스크톱 일반 본문은 22px, 라벨·버튼·보조정보는 18–19px, 모바일 일반 본문은 19px와 버튼 18px을 기준으로 한다. 13–14px 보조문구를 새로 만들지 않는다.
 - 2026-09-01 모바일 최적화는 최종 선택 PNG/JPG 원본을 보존하면서 실제 페이지 참조용 WebP 파생본 16개를 추가했다. 첫 화면 다비드만 우선 로드하고 장비·프로그램·가격 이미지는 지연 로드한다. 390×844에서 가로 넘침과 깨진 이미지가 없었고, 장비 설명·하단 상담 바는 최소 16px, FAQ 번호 대비는 WCAG AA 기준을 충족한다. 정적 Pages 링크 검사는 16개다. 공개 Pages Lighthouse는 Performance·Accessibility·Best Practices·SEO 모두 100, 총 전송량 601KiB, LCP 1.7초였다.
 - 2026-09-01 기능 커밋 `051964c` 기준 GitHub Pages 실행 `33469625274`는 성공했다.
+- 2026-09-01 병원 웹사이트 적용용 iframe 호스트와 파일질라 업로드 구조를 추가했다. 전체 랜딩과 `depilation/1.php`, `depilation/2.php` 분리본은 동일한 정적 소스를 사용하며 `scripts/prepare-filezilla-deploy.mjs`, `scripts/build-depilation-deploy.mjs`, `scripts/check-depilation-deploy.mjs`로 재생성·검증한다.
+- 가격 카드의 프라이빗 이미지는 정사각 원본을 CSS로 확대·복제하지 않는다. 카드 비율로 제작한 `public/private-marble-wide-v2.png`를 다른 가격 카드와 동일한 `object-fit: cover` 규칙으로 사용한다.
+- 가격 카드에는 `revealImage`/`clip-path` 스크롤 애니메이션을 적용하지 않는다. 이 애니메이션은 등장 중 카드 왼쪽과 제목을 잘라 보이게 했다. 프로그램 이미지의 등장 애니메이션만 유지한다.
+- 2026-09-01 최신 로컬 검증에서 프라이빗 가격 카드는 `animation-name: none`, `clip-path: none`, 제목 왼쪽 inset 22px였고 정적 export 검사 16개 링크가 통과했다.
 - 모바일 정적 Pages에서도 등장 모션이 실제로 작동하는 것을 390×844에서 확인했다.
 - 별도 제품 Release는 필요하지 않다. 이 프로젝트의 배포 단위는 GitHub Pages다.
 - 병원 내부의 최종 의료 문구·가격·장비 표현은 공개 확정 전에 원장 또는 담당자의 검수가 필요하다.

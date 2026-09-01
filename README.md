@@ -10,3 +10,11 @@ JJ비뇨기과의 기존 남성 제모 안내 정보를 바탕으로 구성한 �
 - 원본 개발: `pnpm dev`
 - 정적 페이지 생성: 프로덕션 서버 실행 후 `node scripts/export-static.mjs`
 - 프로젝트 상태와 디자인 원칙: [`HANDOFF.md`](./HANDOFF.md)
+
+## 병원 웹사이트 적용본
+
+- 파일질라 업로드 구조 생성: `node scripts/prepare-filezilla-deploy.mjs <landing/male-grooming 경로>`
+- 제모 1·2 페이지 분리본 생성: `node scripts/build-depilation-deploy.mjs <기존 depilation 백업> <출력 경로>`
+- 분리본 검사: `node scripts/check-depilation-deploy.mjs <출력 경로>`
+- `/child/sub/landing/`은 전체 랜딩, `/child/sub/depilation/1.php`는 안내 영역, `2.php`는 부위·가격 영역을 사용한다.
+- `2.php`에는 히어로·전후관리·FAQ·상담 CTA가 포함되지 않는다.
