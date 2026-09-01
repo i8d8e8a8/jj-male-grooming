@@ -320,6 +320,7 @@ html,body{overflow-x:hidden}
 .heroContent{display:grid;flex:1;grid-template-columns:minmax(520px,650px) minmax(430px,1fr);gap:clamp(48px,6vw,104px);align-items:end}
 .heroCopy{align-self:center;padding-top:34px}
 .heroPanel{position:static;align-self:end;padding-top:22px}
+.heroSignal{display:none}
 
 @media(max-width:1100px){
   .heroInner{width:calc(100% - 64px)}
@@ -356,3 +357,14 @@ html,body{overflow-x:hidden}
 @media(min-width:901px) and (max-aspect-ratio:12/5){.heroVisual>img{object-position:center 24%}}
 .heroVisual>img.heroUltra{display:none}
 @media(min-width:1800px) and (min-aspect-ratio:12/5){.heroVisual>img.heroUltra{display:block}}
+
+/* Anchor desktop copy to the viewport and use the former dead zone for a compact device cue. */
+@media(min-width:1200px){
+  .heroInner{width:calc(100% - 192px);max-width:none}
+  .heroContent{width:min(1728px,100%);grid-template-columns:650px 120px minmax(520px,1fr);gap:56px}
+  .heroSignal{display:flex;align-self:end;margin-bottom:58px;padding-left:20px;border-left:1px solid #ffffff40;flex-direction:column;color:#fff}
+  .heroSignal span{margin-bottom:12px;color:#8eb9dd;font-size:12px;letter-spacing:.14em}
+  .heroSignal strong{font-size:30px;line-height:1;font-weight:600;letter-spacing:-.04em}
+  .heroSignal i{margin:5px 0;color:#59b7ff;font-size:16px;font-style:normal}
+  .heroSignal small{margin-top:6px;color:#8eb9dd;font-size:13px;letter-spacing:.12em}
+}
