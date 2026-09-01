@@ -9,8 +9,8 @@ Codex 작업: `JJ 남성 제모 — 국내 클리닉형 랜딩페이지 개선`
 - 저장소: `i8d8e8a8/jj-male-grooming`
 - 기본 브랜치: `main`
 - 공개 페이지: `https://i8d8e8a8.github.io/jj-male-grooming/`
-- 마지막 기능 커밋: `61d2eb9` (`fix: enable mobile reveal motion on Pages`)
-- 마지막 확인한 Pages 실행: `33353591600`, 성공
+- 마지막 기능 커밋: `051964c` (`refactor: center hero content on wide screens`)
+- 마지막 확인한 Pages 실행: `33469625274`, 성공
 - 로컬 원본: `outputs/male-hair-removal`
 - `app/`은 편집 원본이고 `docs/`는 GitHub Pages용 생성 결과다.
 
@@ -121,7 +121,7 @@ git push github main
 
 - 소스, 최종 이미지, 정적 결과와 커밋 이력은 GitHub에 보존돼 있다.
 - 2026-09-01 히어로는 왼쪽 네이비 여백과 오른쪽 조각상을 한 프레임에 담은 16:9 이미지 `hero-male-wide-v2.png` 한 장을 전체 배경으로 사용한다. 인물 영역을 따로 이동하지 않으며, 데스크톱은 배경 초점을 아래쪽에 맞춰 쇄골과 가슴까지 보여준다. 로고·메인 카피·정보 패널은 중앙 최대폭 1440px의 `heroInner`/`heroContent` 그리드 안에서 함께 정렬해 2560px 와이드에서도 두 정보 영역 사이 간격이 104px로 유지된다. 큰 제목은 유지하고 본문·라벨·가격·FAQ 등 작은 글자는 데스크톱 본문 20px, 모바일 본문 18px를 기준으로 확대했다. 히어로 브랜드는 `UROLOGY`, 분류 문구는 `남성 레이저 제모`로 정리했다.
-- 2026-08-31 마지막 기능 커밋 기준 GitHub Pages 배포는 성공했다.
+- 2026-09-01 기능 커밋 `051964c` 기준 GitHub Pages 실행 `33469625274`는 성공했다.
 - 모바일 정적 Pages에서도 등장 모션이 실제로 작동하는 것을 390×844에서 확인했다.
 - 별도 제품 Release는 필요하지 않다. 이 프로젝트의 배포 단위는 GitHub Pages다.
 - 병원 내부의 최종 의료 문구·가격·장비 표현은 공개 확정 전에 원장 또는 담당자의 검수가 필요하다.
