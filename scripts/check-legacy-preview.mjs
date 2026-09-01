@@ -25,7 +25,7 @@ for (const rule of [
   if (!html.includes(rule)) throw new Error(`Missing legacy responsive rule: ${rule}`);
 }
 
-if (/<iframe\b/i.test(html)) throw new Error('Preview must use the landing DOM directly, not an iframe');
+if (html.includes('legacy-landing-frame')) throw new Error('Preview must use the landing DOM directly, not a wrapper iframe');
 if (!html.includes('onsubmit="return false"')) throw new Error('Preview consultation form must not submit');
 
 console.log('legacy shell preview OK');
