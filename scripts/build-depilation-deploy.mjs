@@ -12,7 +12,7 @@ await Promise.all([mkdir(depilation, {recursive: true}), mkdir(shared, {recursiv
 const wrapper = (page, label) => `<?php include $_SERVER['DOCUMENT_ROOT'] . '/child/inc/head.php'; ?>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/child/inc/header.php'; ?>
 <div id="sub-wrap" class="jj-grooming-wrap"><div class="sub-contents"><div class="landing-area">
-<iframe id="jj-grooming-frame" src="/child/sub/landing/male-grooming/${page}.html?v=${page === 'depilation-areas' ? '20260901e' : '20260901a'}" title="${label}" scrolling="no" loading="eager"></iframe>
+<iframe id="jj-grooming-frame" src="/child/sub/landing/male-grooming/${page}.html?v=${page === 'depilation-areas' ? '20260901f' : '20260901a'}" title="${label}" scrolling="no" loading="eager"></iframe>
 </div></div></div>
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/child/inc/footer.php'; ?>
 <link rel="stylesheet" href="/child/sub/landing/frame-host-grooming.css?v=20260901c">

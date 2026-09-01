@@ -44,6 +44,7 @@ for (const rule of ['.label{font-size:19px', '--copy-size:22px', '.heroInner{', 
 }
 if (!/\.priceTable \.priceVisual\{[^}]*display:block/.test(css)) throw new Error('price visual single-column layout missing');
 if (!/\.priceTable section:nth-child\(5\) \.priceVisual img\{[^}]*object-fit:contain/.test(css)) throw new Error('private price visual fit rule missing');
+if (!/\.priceTable section:nth-child\(5\) \.priceVisual:before\{[^}]*private-marble[^)}]*\.webp/.test(css)) throw new Error('private price visual background fill missing');
 
 for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
   if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);
