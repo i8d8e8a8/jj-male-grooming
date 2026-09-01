@@ -48,7 +48,7 @@ for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 �
 }
 
 if (!html.includes('<div class="heroInner">') || !html.includes('<div class="heroContent">')) throw new Error('Hero content must share one centered layout canvas');
-if (!html.includes('hero-david-cutout-v2.png') || !sourceCss.includes("mask:url('../../../hero-david-cutout-v1.png')")) throw new Error('Missing refined hero subject or verified alpha mask');
+if (!html.includes('hero-david-cutout-v2.webp') || !sourceCss.includes("mask:url('../../../hero-david-cutout-v1.webp')")) throw new Error('Missing refined hero subject or verified alpha mask');
 if (!sourceCss.includes(':root{--copy-size:22px}') || !sourceCss.includes('.label{font-size:19px}')) throw new Error('Missing expanded supporting typography');
 if (!sourceCss.includes("hero-wave-field-v2.svg') center/cover") || !sourceCss.includes('grid-template-columns:650px minmax(520px,846px)')) throw new Error('Missing refined wave field or stable desktop hero grid');
 
@@ -95,7 +95,11 @@ for (const asset of [
   if (!html.includes(asset)) throw new Error(`Missing optimized image reference: ${asset}`);
   await access(new URL(asset, docs));
 }
-for (const markup of ['fetchpriority="high"', 'loading="lazy"', 'width="1672" height="941"', 'rel="icon"']) {
+for (const asset of ['cynosure-product-lineage.webp', 'care-before-shaving.webp', 'care-after-sunscreen.webp', 'strengths-hesitation.webp']) {
+  if (!sourceCss.includes(asset)) throw new Error(`Missing optimized CSS image reference: ${asset}`);
+  await access(new URL(asset, docs));
+}
+for (const markup of ['fetchPriority="high"', 'loading="lazy"', 'width="1672" height="941"', 'rel="icon"']) {
   if (!html.includes(markup)) throw new Error(`Missing mobile delivery markup: ${markup}`);
 }
 await access(new URL('favicon.svg', docs));
@@ -104,6 +108,9 @@ for (const rule of ['.specs p{font-size:16px', '.equipmentText li span{font-size
 }
 const sitemap = await readFile(new URL('sitemap.xml', docs), 'utf8');
 if (!sitemap.includes('<lastmod>2026-09-01</lastmod>')) throw new Error('Sitemap lastmod must match the latest mobile optimization');
+for (const legacyAsset of ['program-body-organic-v10.png', 'program-face-symbol-v3.png', 'program-private-valley-v3.png', 'cynosure-product-lineage.png', 'care-before-shaving.jpg', 'care-after-sunscreen.jpg', 'strengths-hesitation.jpg']) {
+  if (css.includes(legacyAsset)) throw new Error(`CSS still loads a legacy mobile asset: ${legacyAsset}`);
+}
 
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
 for (const rule of ["revealRoot.classList.add('motion-ready')", "section.classList.add('reveal')", "entry.target.classList.add('is-visible')"]) {
