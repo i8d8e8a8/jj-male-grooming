@@ -320,7 +320,6 @@ html,body{overflow-x:hidden}
 .heroContent{display:grid;flex:1;grid-template-columns:minmax(520px,650px) minmax(430px,1fr);gap:clamp(48px,6vw,104px);align-items:end}
 .heroCopy{align-self:center;padding-top:34px}
 .heroPanel{position:static;align-self:end;padding-top:22px}
-.heroSignal{display:none}
 
 @media(max-width:1100px){
   .heroInner{width:calc(100% - 64px)}
@@ -361,10 +360,18 @@ html,body{overflow-x:hidden}
 /* Anchor desktop copy to the viewport and use the former dead zone for a compact device cue. */
 @media(min-width:1200px){
   .heroInner{width:calc(100% - 192px);max-width:none}
-  .heroContent{width:min(1728px,100%);grid-template-columns:650px 120px minmax(520px,1fr);gap:56px}
-  .heroSignal{display:flex;align-self:end;margin-bottom:58px;padding-left:20px;border-left:1px solid #ffffff40;flex-direction:column;color:#fff}
-  .heroSignal span{margin-bottom:12px;color:#8eb9dd;font-size:12px;letter-spacing:.14em}
-  .heroSignal strong{font-size:30px;line-height:1;font-weight:600;letter-spacing:-.04em}
-  .heroSignal i{margin:5px 0;color:#59b7ff;font-size:16px;font-style:normal}
-  .heroSignal small{margin-top:6px;color:#8eb9dd;font-size:13px;letter-spacing:.12em}
+  .heroContent{width:min(1728px,100%);grid-template-columns:650px minmax(520px,846px);gap:232px}
+}
+
+/* Separate subject and background so the wave field can breathe at every aspect ratio. */
+.heroVisual{background:#061b36;isolation:isolate}
+.heroVisual:before{content:"";position:absolute;z-index:0;inset:-40%;background:radial-gradient(circle at 45% 56%,rgba(21,126,210,.16),transparent 28%),repeating-radial-gradient(ellipse at 45% 56%,transparent 0 92px,rgba(77,170,238,.13) 93px 94px,transparent 95px 156px);transform:rotate(-7deg);animation:waveBreathe 8s ease-in-out infinite alternate}
+.heroVisual>img.heroCutout{display:block;position:absolute;z-index:1;right:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;opacity:.94}
+.heroVisual:after{z-index:2;background:linear-gradient(90deg,rgba(6,27,54,.96) 0%,rgba(6,27,54,.74) 37%,rgba(6,27,54,.16) 66%,transparent 82%),linear-gradient(0deg,rgba(3,20,41,.68),transparent 42%)}
+@keyframes waveBreathe{to{transform:rotate(-7deg) scale(1.035);opacity:.76}}
+
+@media(max-width:640px){
+  .heroVisual:before{inset:-25% -95%;background:radial-gradient(circle at 45% 44%,rgba(21,126,210,.14),transparent 25%),repeating-radial-gradient(ellipse at 45% 44%,transparent 0 68px,rgba(77,170,238,.12) 69px 70px,transparent 71px 116px)}
+  .heroVisual>img.heroCutout{right:-220px;height:100%}
+  .heroVisual:after{background:linear-gradient(90deg,rgba(6,27,54,.68),rgba(6,27,54,.04) 80%),linear-gradient(0deg,rgba(3,20,41,.78),transparent 55%)}
 }

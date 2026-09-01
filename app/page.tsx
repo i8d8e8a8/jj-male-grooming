@@ -80,12 +80,11 @@ export default function Home() {
   };
   return <main data-reveal-root><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><RevealMotion/>
     <section className="hero">
-      <div className="heroVisual" aria-label="자연스러운 남성 피부와 턱선을 표현한 이미지"><img className="heroDefault" src="./hero-male-wide-v2.png" alt="자연스러운 피부결의 남성 측면 인물"/><img className="heroUltra" src="./hero-male-ultrawide-v1.png" alt=""/></div>
+      <div className="heroVisual" aria-label="파장 위에 배치된 남성 턱선 조각상"><img className="heroCutout" src="./hero-david-cutout-v1.png" alt="청색 레이저 선이 턱선을 따라 흐르는 남성 조각상"/></div>
       <div className="heroInner">
         <div className="heroBrand"><img src="./jj-mark.png" alt="JJ비뇨기과"/><span>UROLOGY</span></div>
         <div className="heroContent">
           <div className="heroCopy"><p className="label">남성 레이저 제모</p><h1><span>남자의 제모는</span><span>달라야 합니다.</span></h1><p className="lead">굵고 깊은 모근부터 민감한 프라이빗 부위까지.<br/>남성의 피부와 신체 구조를 고려한 맞춤 레이저 제모</p><div className="actions"><a className="button light" href="#consultation">1:1 비밀 상담</a><a className="quietLink" href="#program">시술 부위 확인 <span>↓</span></a></div></div>
-          <div className="heroSignal" aria-label="755나노미터와 1064나노미터 듀얼 파장"><span>DUAL WAVE</span><strong>755</strong><i>+</i><strong>1064</strong><small>nm</small></div>
           <div className="heroPanel"><span>남성 전담 제모 클리닉</span><strong>오직 남성을 위한<br/>프라이빗 제모</strong><dl><div><dt>100%</dt><dd>남성 의료진·스태프</dd></div><div><dt>1:1</dt><dd>피부·모질 맞춤 출력</dd></div><div><dt>독립 공간</dt><dd>프라이버시를 고려한 시술</dd></div></dl></div>
         </div>
       </div>
