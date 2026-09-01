@@ -39,8 +39,12 @@ for (const rule of ['animation-timeline:view()', 'prefers-reduced-motion', 'max-
   if (!css.includes(rule)) throw new Error(`Missing responsive motion rule: ${rule}`);
 }
 
-for (const rule of ['.label{font-size:13px', '--copy-size:15px', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
+for (const rule of ['.label{font-size:15px', '--copy-size:18px', '@media (min-width:1500px)', '@keyframes titleRise', '@keyframes visualDrift', '@keyframes lineSweep']) {
   if (!css.includes(rule)) throw new Error(`Missing enhanced typography or motion rule: ${rule}`);
+}
+
+for (const text of ['<span>UROLOGY</span>', '<p class="label">남성 레이저 제모</p>']) {
+  if (!html.includes(text)) throw new Error(`Missing updated hero copy: ${text}`);
 }
 
 for (const rule of ['--display-size:clamp(72px,7vw,112px)', '--section-size:clamp(52px,5.7vw,84px)', '.reveal.is-visible', '--stagger']) {

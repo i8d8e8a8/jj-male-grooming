@@ -273,3 +273,22 @@ html,body{overflow-x:hidden}
 /* Keep the final information sections fully legible near the page end. */
 .careColumns article,.faq>.sectionTitle,.faq>.faqList,.consultation>*,.motion-ready .reveal .careColumns article,.motion-ready .faq.reveal>.sectionTitle,.motion-ready .faq.reveal>.faqList,.motion-ready .consultation.reveal>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
 .faq>.sectionTitle>*{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}.faq>.sectionTitle h2{color:var(--ink)}
+
+/* Improve readability without inflating the already-large display headings. */
+:root{--copy-size:18px}
+.label{font-size:15px}
+.heroBrand span,.heroPanel>span,.heroPanel dd,.introFacts span,.strengthList article>span:first-child,.programIndex>span,.process li>span:first-child,.faqQuestion span,.clinicInfo{font-size:14px}
+.button,.quietLink,.heroPanel dt,.programCopy b,.priceTable p,.priceCta{font-size:16px}
+.introFacts p,.strengthList p,.equipmentText li,.equipmentEvolution header>p:last-child,.equipmentEvolution li p,.videoNotes p,.process li p,.careColumns p,.faqAnswer p{font-size:var(--copy-size)}
+
+@media(min-width:1500px){
+  .hero{grid-template-columns:minmax(0,54%) 1fr;padding-left:max(5vw,72px);padding-right:max(5vw,72px)}
+  .heroBrand{left:max(5vw,72px)}
+  .heroVisual{inset:0 0 0 46%}
+  .heroVisual>img{width:110%;height:88%;object-position:left top}
+}
+
+@media(max-width:640px){
+  :root{--copy-size:16px}
+  .label{font-size:14px}
+}
