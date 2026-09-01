@@ -80,6 +80,31 @@ for (const seo of ['rel="canonical"','og:title','application/ld+json','MedicalCl
 await access(new URL('robots.txt', docs));
 await access(new URL('sitemap.xml', docs));
 
+for (const asset of [
+  'hero-david-cutout-v2.webp',
+  'apogee-elite-plus-device-cutout.webp',
+  'program-face-symbol-v3.webp',
+  'program-body-organic-v10.webp',
+  'program-private-valley-v3.webp',
+  'face-marble-v2.webp',
+  'chest-marble-v2.webp',
+  'arm-marble.webp',
+  'leg-marble-v4.webp',
+  'private-marble.webp',
+]) {
+  if (!html.includes(asset)) throw new Error(`Missing optimized image reference: ${asset}`);
+  await access(new URL(asset, docs));
+}
+for (const markup of ['fetchpriority="high"', 'loading="lazy"', 'width="1672" height="941"', 'rel="icon"']) {
+  if (!html.includes(markup)) throw new Error(`Missing mobile delivery markup: ${markup}`);
+}
+await access(new URL('favicon.svg', docs));
+for (const rule of ['.specs p{font-size:16px', '.equipmentText li span{font-size:16px', '.mobileBar a{font-size:16px', '.faqQuestion span{color:#5f6f80']) {
+  if (!sourceCss.includes(rule)) throw new Error(`Missing mobile legibility rule: ${rule}`);
+}
+const sitemap = await readFile(new URL('sitemap.xml', docs), 'utf8');
+if (!sitemap.includes('<lastmod>2026-09-01</lastmod>')) throw new Error('Sitemap lastmod must match the latest mobile optimization');
+
 if (!html.includes('data-reveal-root')) throw new Error('Missing reliable reveal observer root');
 for (const rule of ["revealRoot.classList.add('motion-ready')", "section.classList.add('reveal')", "entry.target.classList.add('is-visible')"]) {
   if (!html.includes(rule)) throw new Error(`Missing static reveal motion: ${rule}`);
