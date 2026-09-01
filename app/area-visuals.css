@@ -343,3 +343,13 @@ html,body{overflow-x:hidden}
 }
 
 @media(max-width:380px){.heroInner{width:calc(100% - 32px)}}
+
+/* Preserve the full portrait on ultrawide displays instead of cropping it into an abstract neck detail. */
+@media(min-width:1800px) and (min-aspect-ratio:12/5){
+  .heroInner{width:min(1680px,calc(100% - 112px))}
+  .heroContent{grid-template-columns:minmax(620px,700px) minmax(520px,1fr);gap:80px}
+  .heroVisual>img{position:absolute;left:50%;right:auto;bottom:0;width:auto;max-width:none;height:100%;margin:0;object-fit:contain;object-position:center bottom;filter:brightness(1.28) contrast(1.06);opacity:1}
+  .heroVisual:after{background:linear-gradient(90deg,var(--navy) 0 40%,rgba(7,28,56,.72) 48%,transparent 60%)}
+}
+
+@media(min-width:901px) and (max-aspect-ratio:12/5){.heroVisual>img{object-position:center 24%}}
